@@ -1,4 +1,3 @@
-<meta name="google-site-verification" content="9R9JzX93Z4Es7BxzrEVop_imSoI1zgOlRccanYMkYjs" />
     A    F    R    I    C    A    N    A    Framework.
     *    *    *    *    *    *    *    *    *
     |    |    |    |    |    |    |    |    |            [Africana Topographical Map]
