@@ -1,0 +1,5 @@
+bbot
+pipx
+updog
+pproxy
+pycryptodome
