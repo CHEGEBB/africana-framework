@@ -20,6 +20,15 @@ Africana is developed by [Rojahs Montari]
 ## contact
 For more details, contact Rojahs Montari at RojahsMontari@gmail.com.
 
+## Prerequisites
+
+Before you begin, ensure you have met the following requirements:
+- **Python 3:** Africana is written in Python 3, so make sure you have it installed on your machine.
+
+  ```bash
+  sudo apt update
+  sudo apt install python3
+  ```
 ## Installation
 
 ```bash
@@ -27,6 +36,9 @@ git clone https://github.com/r0jahsm0ntar1/africana-framework
 ```
 ```bash
 cd africana-framework
+```
+```bash
+pip install -r requirements.txt
 ```
 ```bash
 python3 installer.py
