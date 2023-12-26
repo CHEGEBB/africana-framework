@@ -1,10 +1,12 @@
 # 🌐 Africana Framework - Machine Pentesters For Exploration 🌐
 
 Africana is a REDTEAM Penetration Testing Framework written in pure Python3. It aims to make penetration testing easier for testers by covering a wide range of attack vectors, including web exploitation, WiFi attacks, phishing, malware generation, social engineering attacks, password cracking, and internal network attacks.
-## Disclaimer: 🚧 Hacking is How you define it, Yo! With Great power ,,,you know the drill... 🚧**
-
+## Disclaimer: 🚧 Hacking is addictive  , Yo! With Great power ,,,you know the drill... 🚧**
+```bash
 ~Africana is strictly designed for educational purposes only. If you think you're about to become the next cyber-vigilante, think again. This tool won't magically turn you into a hacking wizard overnight. It's more like a virtual playground for learning the art (and science) of ethical hacking.
 
+🙅‍♂️ Don't even think about using this tool for anything illegal or malicious. The cyber police will find you, and they won't be amused.
+```
 ## Features
 
 - 🔒 System Security Configuration with Tor, Privoxy, Squid, Macchanger, Dnsleak, etc.
