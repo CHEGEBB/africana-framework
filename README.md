@@ -40,6 +40,7 @@ cd africana-framework
 ```bash
 pip install -r requirements.txt
 ```
+## The script should be run as a super user do(sudo) for permissions .Remember this otherwise you will encounter an error
 ```bash
-python3 installer.py
+sudo python3 africana.py
 ```
