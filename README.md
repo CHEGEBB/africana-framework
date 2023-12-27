@@ -52,12 +52,13 @@ cd africana-framework
 ```bash
 python3 installer.py
 ```
-## The script should be run as a super user do(sudo) for permissions .Remember this otherwise you will encounter an error
+## The script should be run as a super user do(sudo) for root permissions .
 ```bash
 sudo python3 africana.py
 ```
-## Youtube 
-[ please subscribe ] ![image](https://github.com/r0jahsm0ntar1/africana-framework/assets/108395400/885d8618-f3f1-4784-93ca-313e1f08bcd1) - https://youtube.com/@RojahsMontari
+## Youtube [ please subscribe ]
+ ![image](https://github.com/r0jahsm0ntar1/africana-framework/assets/108395400/885d8618-f3f1-4784-93ca-313e1f08bcd1) 
+ - https://youtube.com/@RojahsMontari
 
 ## About the Author
    	   	            __                 _____ _____     _     _   
