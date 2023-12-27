@@ -17,7 +17,8 @@
 * It aims to make penetration testing easier for testers by covering a wide range of attack vectors including;
  web exploitation, WiFi attacks, phishing, malware generation, social engineering attacks, password cracking, and internal network attacks.
 
-# Disclaimer: 🚧 Hacking is addictive 😂, Yoooh! "With Great power."👀 You know the drill. 🚧**
+# Disclaimer: 
+🚧 Hacking is addictive😂, Yoh! "With Great power."👀 You know the drill. 🚧
 
 *Africana is strictly designed for educational purposes only. If you think you're about to become the next cyber-vigilante, think again.**<br>
 *This tool won't magically turn you into a hacking wizard overnight. It's more like a virtual playground for learning the art (and science) of ethical hacking.**<br>
@@ -34,8 +35,8 @@
 
 ## About the Author
 Africana is developed by [Rojahs Montari]
-## Youtube
-(https://youtube.com/@RojahsMontari).please subscribe
+## Youtube [please subscribe]
+https://youtube.com/@RojahsMontari
 ## contact
 For more details, contact Rojahs Montari at RojahsMontari@gmail.com.
 
@@ -88,8 +89,8 @@ sudo python3 africana.py
     ⠀⠀⠸⠁⠾⠂⠀⠀⠻⠘⠟⣯⠻⠉⠁
 
     Rojahs Montari Machine Pentesters For Exploration.
-* Africana Is a REDTEAM Penetration Testing Framework written in pure python3.
-* YouTube Channel https://youtube.com/@RojahsMontari.[Pleas Subscribe].
-* Contact Me :RojahsMontari@gmail.com
+    * Africana Is a REDTEAM Penetration Testing Framework written in pure python3.
+    * YouTube Channel https://youtube.com/@RojahsMontari
+    * Contact Me :RojahsMontari@gmail.com
 
 
