@@ -58,9 +58,8 @@ python3 installer.py
 ```bash
 sudo python3 africana.py
 ```
-
-## About the Author
 ![image](https://github.com/r0jahsm0ntar1/africana-framework/assets/108395400/0a60c641-41ae-48d6-b84e-f83b5fd5b4d6)
+## About the Author
    	   	            __                 _____ _____     _     _   
 			 __|  |___ ___ _ _ ___|     |  |  |___|_|___| |_ 
  			|  |  | -_|_ -| | |_ -|   --|     |  _| |_ -|  _|
