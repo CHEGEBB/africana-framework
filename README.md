@@ -20,9 +20,9 @@
 # Disclaimer: 
 🚧 Hacking is addictive😂, Yoh! "With Great power."👀 You know the drill. 🚧
 
-*Africana is strictly designed for educational purposes only. If you think you're about to become the next cyber-vigilante, think again.**<br>
-*This tool won't magically turn you into a hacking wizard overnight. It's more like a virtual playground for learning the art (and science) of ethical hacking.**<br>
-*🙅‍♂️ Don't even think about using this tool for anything illegal or malicious. The cyber police will find you, and they won't be amused.**
+- * Africana is strictly designed for educational purposes only. If you think you're about to become the next cyber-vigilante, think again.**<br>
+- * This tool won't magically turn you into a hacking wizard overnight. It's more like a virtual playground for learning the art (and science) of ethical hacking.**<br>
+- * 🙅‍♂️ Don't even think about using this tool for anything illegal or malicious. The cyber police will find you, and they won't be amused.**
 
 ## Features
 - 🔒 System Security Configuration with Tor, Privoxy, Squid, Macchanger, Dnsleak, etc.
