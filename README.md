@@ -38,7 +38,7 @@ Africana is developed by [Rojahs Montari]
 ## Youtube [please subscribe]
 - https://youtube.com/@RojahsMontari
 
-## contact
+## Contact
 For more details, contact Rojahs Montari at RojahsMontari@gmail.com.
 
 ## Prerequisites
