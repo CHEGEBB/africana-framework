@@ -79,7 +79,7 @@ sudo python3 africana.py
  - https://youtube.com/@RojahsMontari
 
 ## Contact
-![image](https://github.com/r0jahsm0ntar1/africana-framework/assets/108395400/db081c83-241f-4ccf-bf2f-3dd2e213aef3)
+![image](https://github.com/r0jahsm0ntar1/africana-framework/assets/108395400/5dd0a17b-f44d-4acd-a73f-c24b45a38c7e)
 
 For more details, contact Rojahs Montari at RojahsMontari@gmail.com.
 
