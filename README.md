@@ -1,4 +1,4 @@
-![image](https://github.com/r0jahsm0ntar1/africana-framework/assets/108395400/c2cd5f2b-8ab5-4c26-8314-b2897e2ea0ee)
+<a                                  href="https://www.flaticon.com/free-icons/africa" title="africa icons"> </a>
 # 🌐 The africana-framework. Made simple but Lethal! 🌐
 
         A    F    R    I    C    A    N    A    Framework.
