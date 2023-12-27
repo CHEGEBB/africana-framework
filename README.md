@@ -80,12 +80,10 @@ sudo python3 africana.py
 
 ## Contact
 ![image](https://github.com/r0jahsm0ntar1/africana-framework/assets/108395400/5dd0a17b-f44d-4acd-a73f-c24b45a38c7e)
-
-For more details, contact Rojahs Montari at RojahsMontari@gmail.com.
+- RojahsMontari@gmail.com.
 
 ## Twiter
 ![image](https://github.com/r0jahsm0ntar1/africana-framework/assets/108395400/67ca6bb0-86bd-426f-8d3f-0908a2bab171)
-
 - https://twitter.com/r0jahsm0ntar1
 
 ## Facebook
