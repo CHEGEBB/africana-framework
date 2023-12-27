@@ -1,16 +1,3 @@
-    A    F    R    I    C    A    N    A    Framework.
-    *    *    *    *    *    *    *    *    *
-    |    |    |    |    |    |    |    |    |            [Africana Topographical Map]
-    |    |    |    |    |    |    |    |    +- 1. Install, Uninstall or Update Africana Framework.
-    |    |    |    |    |    |    |    +------ 2. System Security Configuration With Tor, Privoxy, Squid, Macchanger, Dnsleak. etc.
-    |    |    |    |    |    |    +----------- 3. Local Network Pentesting With Bettercap, Nmap, Metasploit, Responder, Smbmap. etc.
-    |    |    |    |    |    +---------------- 4. C2 & Revershell Generation Engines With Shelz, Hoaxshell, Ncat, Rlwrap, Villain. etc.
-    |    |    |    |    +--------------------- 5. Wifi Attack Vectors Both Automated & Manual. With Wifite, Airgeddon, Bettercap, Wifipumpkin3.
-    |    |    |    + ------------------------- 6. Password, Hash Cracking With AirCrack-ng, John And Hashcat More Will Be Added As The Tool Grows.
-    |    |    + ------------------------------ 7. Social Engenearing Attacks With Setoolkit, Goodginx, AdvancedPhishing, Gophish, Anonphisher. Others Will Be Added.
-    |    +------------------------------------ 8. Website Attack Vectors With Dnsrecon, Wafw00f, Whatweb, Httpx, Paramspider, Nuclei, BBot, SSlscan, Sqlmap, Xsserscan, Dalfox, Dirsearch, Commix. etc.
-    +----------------------------------------- 9. About The Author Of Africana And Free Pentesting Tricks, Materials. Very Nice Essential Things Just Try Nine.
-
 # 🌐 Africana Framework - Machine Pentesters For Exploration 🌐
 
 Africana is a REDTEAM Penetration Testing Framework written in pure Python3. It aims to make penetration testing easier for testers by covering a wide range of attack vectors, including web exploitation, WiFi attacks, phishing, malware generation, social engineering attacks, password cracking, and internal network attacks.
@@ -29,6 +16,19 @@ Africana is a REDTEAM Penetration Testing Framework written in pure Python3. It 
 - 🎭 Social Engineering Attacks with Setoolkit, Goodginx, AdvancedPhishing, Gophish, Anonphisher, etc.
 - 🌐 Website Attack Vectors with Dnsrecon, Wafw00f, Whatweb, Httpx, Paramspider, Nuclei, BBot, SSlscan, Sqlmap, Xsserscan, Dalfox, Dirsearch, Commix, etc.
 
+    A    F    R    I    C    A    N    A    Framework.
+    *    *    *    *    *    *    *    *    *
+    |    |    |    |    |    |    |    |    |            [Africana Topographical Map]
+    |    |    |    |    |    |    |    |    +- 1. Install, Uninstall or Update Africana Framework.
+    |    |    |    |    |    |    |    +------ 2. System Security Configuration With Tor, Privoxy, Squid, Macchanger, Dnsleak. etc.
+    |    |    |    |    |    |    +----------- 3. Local Network Pentesting With Bettercap, Nmap, Metasploit, Responder, Smbmap. etc.
+    |    |    |    |    |    +---------------- 4. C2 & Revershell Generation Engines With Shelz, Hoaxshell, Ncat, Rlwrap, Villain. etc.
+    |    |    |    |    +--------------------- 5. Wifi Attack Vectors Both Automated & Manual. With Wifite, Airgeddon, Bettercap, Wifipumpkin3.
+    |    |    |    + ------------------------- 6. Password, Hash Cracking With AirCrack-ng, John And Hashcat More Will Be Added As The Tool Grows.
+    |    |    + ------------------------------ 7. Social Engenearing Attacks With Setoolkit, Goodginx, AdvancedPhishing, Gophish, Anonphisher. Others Will Be Added.
+    |    +------------------------------------ 8. Website Attack Vectors With Dnsrecon, Wafw00f, Whatweb, Httpx, Paramspider, Nuclei, BBot, SSlscan, Sqlmap, Xsserscan, Dalfox, Dirsearch, Commix. etc.
+    +----------------------------------------- 9. About The Author Of Africana And Free Pentesting Tricks, Materials. Very Nice Essential Things Just Try Nine.
+
 ## About the Author
 
 Africana is developed by [Rojahs Montari]
@@ -43,8 +43,8 @@ Before you begin, ensure you have met the following requirements:
 - **Python 3:** Africana is written in Python 3, so make sure you have it installed on your machine.
 
   ```bash
-  sudo apt update
-  sudo apt install python3
+  sudo apt update -y
+  sudo apt install python3 -y
   ```
 ## Installation
 
@@ -55,7 +55,7 @@ git clone https://github.com/r0jahsm0ntar1/africana-framework
 cd africana-framework
 ```
 ```bash
-pip install -r requirements.txt
+python3 installer.py
 ```
 ## The script should be run as a super user do(sudo) for permissions .Remember this otherwise you will encounter an error
 ```bash
@@ -96,8 +96,4 @@ sudo python3 africana.py
       * YouTube Channel https://youtube.com/@RojahsMontari.[Pleas Subscribe].
       * Contact Me :RojahsMontari@gmail.com
 
-                           Install Africana.
 
-    git clone https://github.com/r0jahsm0ntar1/africana-framework
-    cd africana-framework
-    python3 installer.py
