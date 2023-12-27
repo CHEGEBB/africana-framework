@@ -13,6 +13,7 @@
         |    +------------------------------------ 8. Website Attack Vectors With Dnsrecon, Wafw00f, Whatweb, Httpx, Paramspider, Nuclei, BBot, SSlscan, Sqlmap, Xsserscan, Dalfox, Dirsearch, Commix. etc.
         +----------------------------------------- 9. About The Author Of Africana And Free Pentesting Tricks, Materials. Very Nice Essential Things Just Try Nine.
 
+![image](https://github.com/r0jahsm0ntar1/africana-framework/assets/108395400/c2cd5f2b-8ab5-4c26-8314-b2897e2ea0ee)
 * Africana-framework is a REDTEAM Penetration Testing Framework written in pure Python3. 
 * It aims to make penetration testing easier for testers by covering a wide range of attack vectors including;
  web exploitation, WiFi attacks, phishing, malware generation, social engineering attacks, password cracking, and internal network attacks.
@@ -60,6 +61,20 @@ sudo python3 africana.py
  ![image](https://github.com/r0jahsm0ntar1/africana-framework/assets/108395400/885d8618-f3f1-4784-93ca-313e1f08bcd1) 
  - https://youtube.com/@RojahsMontari
 
+## Contact
+![image](https://github.com/r0jahsm0ntar1/africana-framework/assets/108395400/db081c83-241f-4ccf-bf2f-3dd2e213aef3)
+
+For more details, contact Rojahs Montari at RojahsMontari@gmail.com.
+
+## Twiter
+![image](https://github.com/r0jahsm0ntar1/africana-framework/assets/108395400/67ca6bb0-86bd-426f-8d3f-0908a2bab171)
+
+- https://twitter.com/r0jahsm0ntar1
+
+## Facebook
+![image](https://github.com/r0jahsm0ntar1/africana-framework/assets/108395400/36976608-115c-422b-a1d6-d69dae172c7a)
+- https://web.facebook.com/RojahMontari
+
 ## About the Author
    	   	            __                 _____ _____     _     _   
 			 __|  |___ ___ _ _ ___|     |  |  |___|_|___| |_ 
@@ -74,5 +89,3 @@ sudo python3 africana.py
     |                      Thanks To Ippsec Hack TheBox.                           |                                                                                                                                 
     |   I Am Working As A Teacher, Cybersecurity Consoltant, Software Enginear.    |                                                                                                                               
     +------------------------------------------------------------------------------+ 
-## Contact
-For more details, contact Rojahs Montari at RojahsMontari@gmail.com.
