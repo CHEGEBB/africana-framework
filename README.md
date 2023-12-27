@@ -1,3 +1,4 @@
+![image](https://github.com/r0jahsm0ntar1/africana-framework/assets/108395400/c2cd5f2b-8ab5-4c26-8314-b2897e2ea0ee)
 # 🌐 The africana-framework. Made simple but Lethal! 🌐
 
         A    F    R    I    C    A    N    A    Framework.
@@ -13,7 +14,9 @@
         |    +------------------------------------ 8. Website Attack Vectors With Dnsrecon, Wafw00f, Whatweb, Httpx, Paramspider, Nuclei, BBot, SSlscan, Sqlmap, Xsserscan, Dalfox, Dirsearch, Commix. etc.
         +----------------------------------------- 9. About The Author Of Africana And Free Pentesting Tricks, Materials. Very Nice Essential Things Just Try Nine.
 
-![image](https://github.com/r0jahsm0ntar1/africana-framework/assets/108395400/c2cd5f2b-8ab5-4c26-8314-b2897e2ea0ee)
+
+![image](https://github.com/r0jahsm0ntar1/africana-framework/assets/108395400/0a60c641-41ae-48d6-b84e-f83b5fd5b4d6)
+
 * Africana-framework is a REDTEAM Penetration Testing Framework written in pure Python3. 
 * It aims to make penetration testing easier for testers by covering a wide range of attack vectors including;
  web exploitation, WiFi attacks, phishing, malware generation, social engineering attacks, password cracking, and internal network attacks.
