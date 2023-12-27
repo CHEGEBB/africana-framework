@@ -1,4 +1,5 @@
-<a                                 ![image](https://github.com/r0jahsm0ntar1/africana-framework/assets/108395400/50b54089-0661-4a89-9a7f-e8329639f883) </a>
+![image](https://github.com/r0jahsm0ntar1/africana-framework/assets/108395400/85d83b3c-5d60-4eff-ad0a-23200a7c2c00)
+
 # 🌐 The africana-framework. Made simple but Lethal! 🌐
 
         A    F    R    I    C    A    N    A    Framework.
@@ -13,9 +14,6 @@
         |    |    + ------------------------------ 7. Social Engenearing Attacks With Setoolkit, Goodginx, AdvancedPhishing, Gophish, Anonphisher. Others Will Be Added.
         |    +------------------------------------ 8. Website Attack Vectors With Dnsrecon, Wafw00f, Whatweb, Httpx, Paramspider, Nuclei, BBot, SSlscan, Sqlmap, Xsserscan, Dalfox, Dirsearch, Commix. etc.
         +----------------------------------------- 9. About The Author Of Africana And Free Pentesting Tricks, Materials. Very Nice Essential Things Just Try Nine.
-
-
-![image](https://github.com/r0jahsm0ntar1/africana-framework/assets/108395400/0a60c641-41ae-48d6-b84e-f83b5fd5b4d6)
 
 * Africana-framework is a REDTEAM Penetration Testing Framework written in pure Python3. 
 * It aims to make penetration testing easier for testers by covering a wide range of attack vectors including;
@@ -62,6 +60,7 @@ sudo python3 africana.py
 ```
 
 ## About the Author
+![image](https://github.com/r0jahsm0ntar1/africana-framework/assets/108395400/0a60c641-41ae-48d6-b84e-f83b5fd5b4d6)
    	   	            __                 _____ _____     _     _   
 			 __|  |___ ___ _ _ ___|     |  |  |___|_|___| |_ 
  			|  |  | -_|_ -| | |_ -|   --|     |  _| |_ -|  _|
