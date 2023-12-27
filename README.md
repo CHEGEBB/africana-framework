@@ -1,4 +1,3 @@
-[Banner]: https://github.com/r0jahsm0ntar1/africana-framework/blob/main/screenshots/africana-framework.main.menu.png "May God Bless You All!!"
     A    F    R    I    C    A    N    A    Framework.
     *    *    *    *    *    *    *    *    *
     |    |    |    |    |    |    |    |    |            [Africana Topographical Map]
