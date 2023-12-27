@@ -41,12 +41,12 @@ For more details, contact Rojahs Montari at RojahsMontari@gmail.com.
 
 ## Prerequisites
 Before you begin, ensure you have met the following requirements:
-- **Python 3:** Africana is written in Python 3, so make sure you have it installed on your machine.
+**Python 3:** Africana is written in Python 3, so make sure you have it installed on your machine.
 
-  ```bash
-  sudo apt update -y
-  sudo apt install python3 -y
-  ```
+```bash
+sudo apt update -y
+sudo apt install python3 -y
+```
 ## Installation
 
 ```bash
@@ -87,9 +87,9 @@ sudo python3 africana.py
     ⠀⢀⣀⠞⠀⠀⠀⡟⣸⣿⣿⣿⣿⣿⣿⣇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
     ⠀⠀⠸⠁⠾⠂⠀⠀⠻⠘⠟⣯⠻⠉⠁
 
-            Rojahs Montari Machine Pentesters For Exploration.
-      * Africana Is a REDTEAM Penetration Testing Framework written in pure python3.
-      * YouTube Channel https://youtube.com/@RojahsMontari.[Pleas Subscribe].
-      * Contact Me :RojahsMontari@gmail.com
+    Rojahs Montari Machine Pentesters For Exploration.
+* Africana Is a REDTEAM Penetration Testing Framework written in pure python3.
+* YouTube Channel https://youtube.com/@RojahsMontari.[Pleas Subscribe].
+* Contact Me :RojahsMontari@gmail.com
 
 
