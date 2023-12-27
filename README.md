@@ -37,7 +37,8 @@
 Africana is developed by [Rojahs Montari]
 ## Youtube [please subscribe]
 - https://youtube.com/@RojahsMontari
-## contact
+
+## Contact
 For more details, contact Rojahs Montari at RojahsMontari@gmail.com.
 
 ## Prerequisites
@@ -88,8 +89,8 @@ sudo python3 africana.py
     ⠀⢀⣀⠞⠀⠀⠀⡟⣸⣿⣿⣿⣿⣿⣿⣇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
     ⠀⠀⠸⠁⠾⠂⠀⠀⠻⠘⠟⣯⠻⠉⠁
 
-    Rojahs Montari Machine Pentesters For Exploration.
+      Rojahs Montari Machine Pentesters For Exploration.
+	
     - Africana Is a REDTEAM Penetration Testing Framework written in pure python3.
     - YouTube Channel https://youtube.com/@RojahsMontari
     - Contact Me :RojahsMontari@gmail.com
-
