@@ -1,10 +1,23 @@
 # 🌐 The Africana-Framework. Made Simple But Lethal!! 🌐
 
+        A    F    R    I    C    A    N    A    Framework.
+        *    *    *    *    *    *    *    *    *
+        |    |    |    |    |    |    |    |    |            [Africana Topographical Map]
+        |    |    |    |    |    |    |    |    +- 1. Install, Uninstall or Update Africana Framework.
+        |    |    |    |    |    |    |    +------ 2. System Security Configuration With Tor, Privoxy, Squid, Macchanger, Dnsleak. etc.
+        |    |    |    |    |    |    +----------- 3. Local Network Pentesting With Bettercap, Nmap, Metasploit, Responder, Smbmap. etc.
+        |    |    |    |    |    +---------------- 4. C2 & Revershell Generation Engines With Shelz, Hoaxshell, Ncat, Rlwrap, Villain. etc.
+        |    |    |    |    +--------------------- 5. Wifi Attack Vectors Both Automated & Manual. With Wifite, Airgeddon, Bettercap, Wifipumpkin3.
+        |    |    |    + ------------------------- 6. Password, Hash Cracking With AirCrack-ng, John And Hashcat More Will Be Added As The Tool Grows.
+        |    |    + ------------------------------ 7. Social Engenearing Attacks With Setoolkit, Goodginx, AdvancedPhishing, Gophish, Anonphisher. Others Will Be Added.
+        |    +------------------------------------ 8. Website Attack Vectors With Dnsrecon, Wafw00f, Whatweb, Httpx, Paramspider, Nuclei, BBot, SSlscan, Sqlmap, Xsserscan, Dalfox, Dirsearch, Commix. etc.
+        +----------------------------------------- 9. About The Author Of Africana And Free Pentesting Tricks, Materials. Very Nice Essential Things Just Try Nine.
+
 * Africana-framework is a REDTEAM Penetration Testing Framework written in pure Python3. 
 * It aims to make penetration testing easier for testers by covering a wide range of attack vectors including;
  web exploitation, WiFi attacks, phishing, malware generation, social engineering attacks, password cracking, and internal network attacks.
 
-## Disclaimer: 🚧 Hacking is addictive  😂, Yoooh! " With Great power.."👀 You know the drill. 🚧**
+# Disclaimer: 🚧 Hacking is addictive 😂, Yoooh! "With Great power."👀 You know the drill. 🚧**
 
 *Africana is strictly designed for educational purposes only. If you think you're about to become the next cyber-vigilante, think again.**<br>
 *This tool won't magically turn you into a hacking wizard overnight. It's more like a virtual playground for learning the art (and science) of ethical hacking.**<br>
@@ -18,19 +31,6 @@
 - 🛠 Password and Hash Cracking with AirCrack-ng, John, Hashcat, and more.
 - 🎭 Social Engineering Attacks with Setoolkit, Goodginx, AdvancedPhishing, Gophish, Anonphisher, etc.
 - 🌐 Website Attack Vectors with Dnsrecon, Wafw00f, Whatweb, Httpx, Paramspider, Nuclei, BBot, SSlscan, Sqlmap, Xsserscan, Dalfox, Dirsearch, Commix, etc.
-
-        A    F    R    I    C    A    N    A    Framework.
-        *    *    *    *    *    *    *    *    *
-        |    |    |    |    |    |    |    |    |            [Africana Topographical Map]
-        |    |    |    |    |    |    |    |    +- 1. Install, Uninstall or Update Africana Framework.
-        |    |    |    |    |    |    |    +------ 2. System Security Configuration With Tor, Privoxy, Squid, Macchanger, Dnsleak. etc.
-        |    |    |    |    |    |    +----------- 3. Local Network Pentesting With Bettercap, Nmap, Metasploit, Responder, Smbmap. etc.
-        |    |    |    |    |    +---------------- 4. C2 & Revershell Generation Engines With Shelz, Hoaxshell, Ncat, Rlwrap, Villain. etc.
-        |    |    |    |    +--------------------- 5. Wifi Attack Vectors Both Automated & Manual. With Wifite, Airgeddon, Bettercap, Wifipumpkin3.
-        |    |    |    + ------------------------- 6. Password, Hash Cracking With AirCrack-ng, John And Hashcat More Will Be Added As The Tool Grows.
-        |    |    + ------------------------------ 7. Social Engenearing Attacks With Setoolkit, Goodginx, AdvancedPhishing, Gophish, Anonphisher. Others Will Be Added.
-        |    +------------------------------------ 8. Website Attack Vectors With Dnsrecon, Wafw00f, Whatweb, Httpx, Paramspider, Nuclei, BBot, SSlscan, Sqlmap, Xsserscan, Dalfox, Dirsearch, Commix. etc.
-        +----------------------------------------- 9. About The Author Of Africana And Free Pentesting Tricks, Materials. Very Nice Essential Things Just Try Nine.
 
 ## About the Author
 Africana is developed by [Rojahs Montari]
