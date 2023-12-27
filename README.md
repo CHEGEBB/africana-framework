@@ -33,22 +33,6 @@
 - 🎭 Social Engineering Attacks with Setoolkit, Goodginx, AdvancedPhishing, Gophish, Anonphisher, etc.
 - 🌐 Website Attack Vectors with Dnsrecon, Wafw00f, Whatweb, Httpx, Paramspider, Nuclei, BBot, SSlscan, Sqlmap, Xsserscan, Dalfox, Dirsearch, Commix, etc.
 
-## About the Author
-    +------------------------------------------------------------------------------+                                                                                                                                 
-    |                         † Jesus Christ Loves You †                           |                                                                                                                                 
-    +------------------------------------------------------------------------------+                                                                                                                                 
-    |        I am Rojahs Montari. A devoted Christian Studied Education In         |                                                                                                                                 
-    |         Kenyatta University Kenya. Got Persionate In Cybersecurity           |                                                                                                                                 
-    |        I Then Furthered My Skills By Research, Practice & Expirience.        |                                                                                                                                 
-    |                      Thanks To Ippsec Hack TheBox.                           |                                                                                                                                 
-    |   I Am Working As A Teacher, Cybersecurity Consoltant, Software Enginear.    |                                                                                                                               
-    +------------------------------------------------------------------------------+ 
-## Youtube [ please subscribe ]
-- https://youtube.com/@RojahsMontari
-
-## Contact
-For more details, contact Rojahs Montari at RojahsMontari@gmail.com.
-
 ## Prerequisites
 Before you begin, ensure you have met the following requirements:
 **Python 3:** Africana is written in Python 3, so make sure you have it installed on your machine.
@@ -72,33 +56,22 @@ python3 installer.py
 ```bash
 sudo python3 africana.py
 ```
+## About the Author
+   	   	            __                 _____ _____     _     _   
+			 __|  |___ ___ _ _ ___|     |  |  |___|_|___| |_ 
+ 			|  |  | -_|_ -| | |_ -|   --|     |  _| |_ -|  _|
+    	    adicted to:	|_____|___|___|___|___|_____|__|__|_| |_|___|_|
+    +------------------------------------------------------------------------------+                                                                                                                                 
+    |               With great power comes great responsibility.                   |                                                                                                                                 
+    +------------------------------------------------------------------------------+                                                                                                                                 
+    |        I am Rojahs Montari. A devoted Christian Studied Education In         |                                                                                                                                 
+    |         Kenyatta University Kenya. Got Persionate In Cybersecurity           |                                                                                                                                 
+    |        I Then Furthered My Skills By Research, Practice & Expirience.        |                                                                                                                                 
+    |                      Thanks To Ippsec Hack TheBox.                           |                                                                                                                                 
+    |   I Am Working As A Teacher, Cybersecurity Consoltant, Software Enginear.    |                                                                                                                               
+    +------------------------------------------------------------------------------+ 
+## Youtube [ please subscribe ]
+- https://youtube.com/@RojahsMontari
 
-    ⠀⠀⠀⠀⠀⠀⢀⣀⣀⢀⣠⣤⣤⣴⣖⠋⠛⠒⢤⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-    ⠀⠀⠀⠀⢠⠊⠀⠈⠙⠻⣿⡻⡿⣟⢟⣿⣢⡀⠀⡹⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-    ⠀⠀⠀⢠⠃⠀⠀⠀⠀⠀⠈⠙⠶⠊⠘⠋⠈⠱⣄⠃⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀
-    ⠀⠀⠀⣸⠀⢠⠀⠀⠀⠀⠀⡰⠋⠀⠀⠀⠀⡆⠈⡆⢅⢀⢠⡄⡀⣂⠀⠀⠀⠀
-    ⠀⠀⠀⣿⡆⠘⣄⠧⠘⠆⢀⢣⠀⠀⠈⡗⢾⣇⢀⠇⡜⣃⠀⠀⠈⠐⢆⠀⠀⠀
-    ⠀⠀⠀⢸⣷⣀⣇⣀⡜⣀⡄⢿⠐⠤⢶⡀⠘⢸⣿⣶⡇⠀⠠⠀⢄⠊⠀⢣⡀⠀
-    ⠀⠀⠀⢸⣿⣾⣿⣽⣿⣿⡷⡆⢇⠐⢋⣣⠀⠁⢣⣷⢣⠀⠐⣲⣄⠢⠀⠈⠙⠀
-    ⠀⠀⠀⠸⣿⣿⣿⣿⣿⣿⣇⡇⠀⠉⠉⠉⢦⠀⠀⢙⢬⠀⡜⢡⡾⣦⠁⠀⢸⢆
-    ⠀⠀⠀⠀⣿⣿⣿⣻⢻⣿⣿⠇⡸⠀⠀⡀⡎⢣⡀⠀⠀⣀⡇⠈⠉⠁⠣⣸⣸⢼
-    ⠀⠀⠀⠀⣿⣿⣿⣿⣿⣿⣿⡀⡇⡄⠀⡇⣷⢀⣿⡖⠚⠋⢴⠄⣤⡤⠖⠉⣧⠆
-    ⠀⠀⠀⠀⢹⣿⣿⣿⣿⣟⣿⢣⣧⣧⣀⣇⣿⣿⣿⡇⠀⠀⠱⣶⡦⠀⠘⠀⢼⠀
-    ⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⢸⣿⣿⣿⣿⣿⣸⣿⠀⠀⢠⠖⣻⠀⠀⠀⠀⡆⠀
-    ⠀⠀⠀⠀⠀⢹⣿⣿⣯⡝⣩⣼⣿⣿⣿⣿⣟⣿⡏⠀⠀⠘⠤⠼⡇⠀⠀⢀⠇⠀
-    ⠀⠀⠀⠀⠀⢸⣿⣿⣿⣇⡟⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⡇⠀⣀⠞⠀⠀
-    ⠀⠀⠀⠀⠀⠘⣿⣿⢻⣷⣽⣿⣿⣿⣿⣿⣿⡏⠀⠀⠀⠀⠀⠀⠧⠒⠁⠀⠀⠀
-    ⠀⠀⠀⠀⠀⠀⢻⣾⣿⣿⢻⣿⣿⣿⣿⣿⣿⠃⠀⠀⠀⠀⠀⠀⠀⠀⣠⠤⠄⠀
-    ⠀⠀⠀⠀⠀⠀⠈⣿⣿⣻⣼⣿⣿⣿⣿⣿⡿⣀⣀⣀⣀⣀⠀⠀⠀⡾⠁⠀⠀⠀
-    ⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⣻⣿⣟⠁⢹⡀⢱⠘⡆⢣⢹⡈⣧⣀⣸⡇⠀⢠⠞⠉
-    ⢰⠶⡒⡄⠀⠀⠀⠈⣿⣿⠽⠿⢺⠁⢸⡇⢸⢰⠇⡞⢸⠁⣿⣉⣉⠀⠀⡏⠀⠀
-    ⠀⠔⣫⠈⠒⠢⠔⣊⣥⣴⣶⣶⣾⠀⣸⢡⣏⣞⣰⢃⣎⡼⠋⠉⠉⠉⠛⠃⠀⠀
-    ⠀⠀⡇⡊⠉⠷⠞⣱⣿⣿⣿⣿⣿⣤⣷⠛⠋⠈⠉⠉⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀
-    ⠀⢀⣀⠞⠀⠀⠀⡟⣸⣿⣿⣿⣿⣿⣿⣇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-    ⠀⠀⠸⠁⠾⠂⠀⠀⠻⠘⠟⣯⠻⠉⠁
-
-      Rojahs Montari Machine Pentesters For Exploration.
-	
-    - Africana Is a REDTEAM Penetration Testing Framework written in pure python3.
-    - YouTube Channel https://youtube.com/@RojahsMontari
-    - Contact Me :RojahsMontari@gmail.com
+## Contact
+For more details, contact Rojahs Montari at RojahsMontari@gmail.com.
