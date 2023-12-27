@@ -57,6 +57,22 @@ python3 installer.py
 ```bash
 sudo python3 africana.py
 ```
+
+## About the Author
+   	   	            __                 _____ _____     _     _   
+			 __|  |___ ___ _ _ ___|     |  |  |___|_|___| |_ 
+ 			|  |  | -_|_ -| | |_ -|   --|     |  _| |_ -|  _|
+   	 adicted to:	|_____|___|___|___|___|_____|__|__|_| |_|___|_|
+    +------------------------------------------------------------------------------+                                                                                                                                 
+    |               With great power comes great responsibility.                   |                                                                                                                                 
+    +------------------------------------------------------------------------------+                                                                                                                                 
+    |        I am Rojahs Montari. A devoted Christian Studied Education In         |                                                                                                                                 
+    |         Kenyatta University Kenya. Got Persionate In Cybersecurity           |                                                                                                                                 
+    |        I Then Furthered My Skills By Research, Practice & Expirience.        |                                                                                                                                 
+    |                      Thanks To Ippsec Hack TheBox.                           |                                                                                                                                 
+    |   I Am Working As A Teacher, Cybersecurity Consoltant, Software Enginear.    |                                                                                                                               
+    +------------------------------------------------------------------------------+ 
+    
 ## Youtube [ please subscribe ]
  ![image](https://github.com/r0jahsm0ntar1/africana-framework/assets/108395400/885d8618-f3f1-4784-93ca-313e1f08bcd1) 
  - https://youtube.com/@RojahsMontari
@@ -74,18 +90,3 @@ For more details, contact Rojahs Montari at RojahsMontari@gmail.com.
 ## Facebook
 ![image](https://github.com/r0jahsm0ntar1/africana-framework/assets/108395400/36976608-115c-422b-a1d6-d69dae172c7a)
 - https://web.facebook.com/RojahMontari
-
-## About the Author
-   	   	            __                 _____ _____     _     _   
-			 __|  |___ ___ _ _ ___|     |  |  |___|_|___| |_ 
- 			|  |  | -_|_ -| | |_ -|   --|     |  _| |_ -|  _|
-   	 adicted to:	|_____|___|___|___|___|_____|__|__|_| |_|___|_|
-    +------------------------------------------------------------------------------+                                                                                                                                 
-    |               With great power comes great responsibility.                   |                                                                                                                                 
-    +------------------------------------------------------------------------------+                                                                                                                                 
-    |        I am Rojahs Montari. A devoted Christian Studied Education In         |                                                                                                                                 
-    |         Kenyatta University Kenya. Got Persionate In Cybersecurity           |                                                                                                                                 
-    |        I Then Furthered My Skills By Research, Practice & Expirience.        |                                                                                                                                 
-    |                      Thanks To Ippsec Hack TheBox.                           |                                                                                                                                 
-    |   I Am Working As A Teacher, Cybersecurity Consoltant, Software Enginear.    |                                                                                                                               
-    +------------------------------------------------------------------------------+ 
