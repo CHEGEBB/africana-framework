@@ -1,4 +1,4 @@
-# 🌐 The Africana-Framework. Made Simple But Lethal!! 🌐
+#🌐 The africana-framework. Made simple but Lethal! 🌐
 
         A    F    R    I    C    A    N    A    Framework.
         *    *    *    *    *    *    *    *    *
