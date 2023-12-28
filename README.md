@@ -4,7 +4,7 @@
 
         A    F    R    I    C    A    N    A    Framework.
         *    *    *    *    *    *    *    *    *
-        |    |    |    |    |    |    |    |    |            [Africana Topographical Map]
+        |    |    |    |    |    |    |    |    |            [Africana Framework Architecture]
         |    |    |    |    |    |    |    |    +- 1. Install, Uninstall or Update Africana Framework.
         |    |    |    |    |    |    |    +------ 2. System Security Configuration With Tor, Privoxy, Squid, Macchanger, Dnsleak. etc.
         |    |    |    |    |    |    +----------- 3. Local Network Pentesting With Bettercap, Nmap, Metasploit, Responder, Smbmap. etc.
