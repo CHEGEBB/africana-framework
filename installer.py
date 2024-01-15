@@ -5,9 +5,8 @@ from src.core.system import *
 
 while True:
     try:
-        os.system('clear')
         installer.update_system(); break
     except:
         os.system('clear')
-        beauty.squid_banner()
+        beauty.graphics(), scriptures.verses()
         break

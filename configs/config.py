@@ -17,8 +17,8 @@ squidstring = ['# Created By africana-framework. Delete At Your Own Risk!!', '',
               'http_access allow localhost', 'http_access allow all', 'http_port 3128', 'hierarchy_stoplist cgi-bin ?', 'cache_peer 127.0.0.1 parent 8118 7 no-query no-digest', 'coredump_dir /var/spool/squid', 
               'refresh_pattern ^ftp:           1440    20%     10080','refresh_pattern ^gopher:        1440    0%      1440', 'refresh_pattern -i (/cgi-bin/|\?) 0     0%      0', 'refresh_pattern .               0       20%     4320',
               'httpd_suppress_version_string on', 'forwarded_for off', 'always_direct allow ftp', 'never_direct allow all']
-dhclientstring = ['# Created By africana-framework. Delete At Your Own Risk!!', '', 'option rfc3442-classless-static-routes code 121 = array of unsigned integer 8;', 'send host-name = gethostname();', 'request subnet-mask, broadcast-address, time-offset, routers,', '	domain-name, domain-name-servers, domain-search, host-name,',
-              '	dhcp6.name-servers, dhcp6.domain-search, dhcp6.fqdn, dhcp6.sntp-servers,', '	netbios-name-servers, netbios-scope, interface-mtu,', '	rfc3442-classless-static-routes, ntp-servers;', 'prepend domain-name-servers 127.0.0.1,1.1.1.1, 1.0.0.1, 8.8.8.8, 8.8.4.4;']
+dhclientstring = ['# Created By africana-framework. Delete At Your Own Risk!!', '', 'option rfc3442-classless-static-routes code 121 = array of unsigned integer 8;', 'send host-name = gethostname();', 'request subnet-mask, broadcast-address, time-offset, routers,', ' domain-name, domain-name-servers, domain-search, host-name,',
+              '	dhcp6.name-servers, dhcp6.domain-search, dhcp6.fqdn, dhcp6.sntp-servers,', '    netbios-name-servers, netbios-scope, interface-mtu,', '	rfc3442-classless-static-routes, ntp-servers;', 'prepend domain-name-servers 127.0.0.1,1.1.1.1, 1.0.0.1, 8.8.8.8, 8.8.4.4;']
 
 changemacstring = ['# Created By africana-framework. Delete At Your Own Risk!!', '', '[Unit]', 'Description=changes mac for %I', 'Wants=network.target', 'Before=network.target', 'BindsTo=sys-subsystem-net-devices-%i.device', 'After=sys-subsystem-net-devices-%i.device', '', '[Service]', 'Type=oneshot', 'ExecStart=/usr/bin/macchanger -r %I', 'RemainAfterExit=yes',
                    '', '[Install]', 'WantedBy=multi-user.target']
@@ -32,19 +32,18 @@ class configure(object):
 
         if os.system("which tor > /dev/null") == 0:
             if not os.path.exists('/etc/tor/torrc'):
-                print(
-                    f"{color(bcolors.RED)}No torrc file is configured.....{bcolors.ENDC}{color(bcolors.GREEN)}Configuring:)")
+                print(f"{bcolors.BLUE}      [             {bcolors.YELLOW}Torrc file is configured.....          {bcolors.BLUE} ] {bcolors.ENDC}")
                 try:
                     f = open('/etc/tor/torrc', 'w+')
                     for elements in torstring:
                         f.write("%s\n" % elements)
                     f.close()
-                    print(f"{color(bcolors.CYAN)}Done....{bcolors.ENDC}")
+                    print(f"{bcolors.BLUE}      [                                           {bcolors.CYAN}{bcolors.GREEN}[ ✔ ] {bcolors.BLUE} ]{bcolors.ENDC}")
                 except Exception as e:
-                    print(f"{color(bcolors.RED)}Failed to write the torrc file{bcolors.ENDC} \n {e}")
+                    print(f"{bcolors.BLUE}      [             {bcolors.RED}Failed to write the torrc file          {bcolors.BLUE} ] {bcolors.ENDC} \n {e} ")
                     pass
             else:
-                print(f"\n{color(bcolors.GREEN)}{bcolors.BOLD}Configuring Torrc {bcolors.ENDC}")
+                print(f"\n{bcolors.BLUE}      [              {bcolors.YELLOW}Configuring Torrc                   {bcolors.BLUE}]{bcolors.ENDC}")
                 time.sleep(0.4)
 
                 with open('/etc/tor/torrc') as x:
@@ -55,10 +54,10 @@ class configure(object):
                 for elements in torstring:
                     torrc.write("%s\n" % elements)
                 torrc.close()
-                print(f"{color(bcolors.RED)}DONE :){bcolors.ENDC}")
+                print(f"{bcolors.BLUE}      [  {bcolors.CYAN}                                        {bcolors.GREEN} [ ✔ ] {bcolors.BLUE} ]{bcolors.ENDC}")
 
         else:
-            print(f'''\n{color(bcolors.RED)}tor isn't installed, install it with 'sudo apt install tor'{bcolors.ENDC}''')
+            print(f"{bcolors.BLUE}      [        {bcolors.RED}  Tor isn't installed, install it with 'sudo apt install tor'     {bcolors.BLUE} ] {bcolors.ENDC}")
             pass
 
         infile = "/lib/systemd/system/tor@default.service"
@@ -90,19 +89,19 @@ class configure(object):
 
         if os.system("which privoxy > /dev/null") == 0:
             if not os.path.exists('/etc/privoxy/config'):
-                print(
-                    f"{color(bcolors.RED)}No privoxy/config file is configured.....{bcolors.ENDC}{color(bcolors.GREEN)}Configuring:)")
+                print(f"{bcolors.BLUE}      [        {bcolors.YELLOW}   No privoxy/config file is configured.....    {bcolors.BLUE} ] {bcolors.ENDC}")
                 try:
                     f = open('/etc/privoxy/config', 'w+')
                     for elements in privoxytring:
                         f.write("%s\n" % elements)
                     f.close()
-                    print(f"{color(bcolors.CYAN)}Done....{bcolors.ENDC}")
+                    print(f"{bcolors.BLUE}      [  {bcolors.CYAN}                                        {bcolors.GREEN} [ ✔ ] {bcolors.BLUE} ]{bcolors.ENDC}")
                 except Exception as e:
-                    print(f"{color(bcolors.RED)}Failed to write the privoxy/config file{bcolors.ENDC} \n {e}")
+                    print(f"{bcolors.BLUE}      [        {bcolors.YELLOW}  Failed to write the privoxy/config file.    {bcolors.BLUE} ] {bcolors.ENDC}\n {e}")
+                    print(f"{color(bcolors.RED)}{bcolors.ENDC} ")
                     pass
             else:
-                print(f"\n{color(bcolors.GREEN)}{bcolors.BOLD}Configuring privoxy/config {bcolors.ENDC}")
+                print(f"{bcolors.BLUE}      [         {bcolors.YELLOW}Configuring privoxy/config.             {bcolors.BLUE} ] {bcolors.ENDC}")
                 time.sleep(0.4)
 
                 with open('/etc/privoxy/config') as x:
@@ -113,27 +112,26 @@ class configure(object):
                 for elements in privoxystring:
                     privoxy.write("%s\n" % elements)
                 privoxy.close()
-                print(f"{color(bcolors.RED)}DONE :){bcolors.ENDC}")
+                print(f"{bcolors.BLUE}      [  {bcolors.CYAN}                                        {bcolors.GREEN} [ ✔ ] {bcolors.BLUE} ]{bcolors.ENDC}")
 
         else:
-            print(f'''\n{color(bcolors.RED)}privoxy isn't installed, install it with 'sudo apt install privoxy'{bcolors.ENDC}''')
+            print(f"{bcolors.BLUE}      [        {bcolors.RED} Privoxy isn't installed, install it with 'sudo apt install privoxy'   {bcolors.BLUE} ] {bcolors.ENDC}")
             pass
 
         if os.system("which squid > /dev/null") == 0:
             if not os.path.exists('/etc/squid/squid.conf'):
-                print(
-                    f"{color(bcolors.RED)}No squid/config file is configured.....{bcolors.ENDC}{color(bcolors.GREEN)}Configuring:)")
+                print(f"{bcolors.BLUE}      [        {bcolors.RED} No squid/config file is configured.  {bcolors.BLUE} ] {bcolors.ENDC}")
                 try:
                     f = open('/etc/squid/squid.conf', 'w+')
                     for elements in squidstring:
                         f.write("%s\n" % elements)
                     f.close()
-                    print(f"{color(bcolors.CYAN)}Done....{bcolors.ENDC}")
+                    print(f"{bcolors.BLUE}      [  {bcolors.CYAN}                                        {bcolors.GREEN} [ ✔ ] {bcolors.BLUE} ]{bcolors.ENDC}")
                 except Exception as e:
-                    print(f"{color(bcolors.RED)}Failed to write the squid/config file{bcolors.ENDC} \n {e}")
+                    print(f"{bcolors.BLUE}      [        {bcolors.RED} Failed to write the squid/config file  {bcolors.BLUE} ] {bcolors.ENDC} \n {e}")
                     pass
             else:
-                print(f"\n{color(bcolors.GREEN)}{bcolors.BOLD}Configuring squid/config {bcolors.ENDC}")
+                print(f"{bcolors.BLUE}      [        {bcolors.YELLOW} Configuring Squid/config  {bcolors.BLUE}                   ] {bcolors.ENDC}")
                 time.sleep(0.4)
 
                 with open('/etc/squid/squid.conf') as x:
@@ -143,27 +141,27 @@ class configure(object):
                 for elements in squidstring:
                     squid.write("%s\n" % elements)
                 squid.close()
-                print(f"{color(bcolors.RED)}DONE :){bcolors.ENDC}")
+                print(f"{bcolors.BLUE}      [  {bcolors.CYAN}                                        {bcolors.GREEN} [ ✔ ] {bcolors.BLUE} ]{bcolors.ENDC}")
 
         else:
-            print(f'''\n{color(bcolors.RED)}squid isn't installed, install it with 'sudo apt install squid'{bcolors.ENDC}''')
+            print(f"{bcolors.BLUE}      [       {bcolors.RED} No Squid try 'apt install squid'          {bcolors.BLUE}] {bcolors.ENDC}")
+            print(f"{bcolors.BLUE}      [  {bcolors.CYAN}                                        {bcolors.RED} [ x ] {bcolors.BLUE} ]{bcolors.ENDC}")
             pass
 
         if os.system("which dhclient > /dev/null") == 0:
             if not os.path.exists('/etc/dhcp/dhclient.conf'):
-                print(
-                    f"{color(bcolors.RED)}No dhclient.conf file is configured.....{bcolors.ENDC}{color(bcolors.GREEN)}Configuring:)")
+                print(f"{bcolors.BLUE}      [{bcolors.YELLOW} No dhclient.conf file is configured.   {bcolors.BLUE}] {bcolors.ENDC}")
                 try:
                     f = open('/etc/dhcp/dhclient.conf', 'w+')
                     for elements in dhclientstring:
                         f.write("%s\n" % elements)
                     f.close()
-                    print(f"{color(bcolors.CYAN)}Done....{bcolors.ENDC}")
+                    print(f"{bcolors.BLUE}      [  {bcolors.CYAN}                                        {bcolors.GREEN} [ ✔ ] {bcolors.BLUE} ]{bcolors.ENDC}")
                 except Exception as e:
-                    print(f"{color(bcolors.RED)}Failed to write the dhclient.conf file{bcolors.ENDC} \n {e}")
+                    print(f"{bcolors.BLUE}      [        {bcolors.RED} Failed to write the dhclient.conf file {bcolors.BLUE}                   ] {bcolors.ENDC}\n {e}")
                     pass
             else:
-                print(f"\n{color(bcolors.GREEN)}{bcolors.BOLD}Configuring dhclient.conf {bcolors.ENDC}")
+                print(f"{bcolors.BLUE}      [        {bcolors.YELLOW} Configuring dhclient.conf file {bcolors.BLUE}          ]{bcolors.ENDC}")
                 time.sleep(0.4)
 
                 with open('/etc/dhcp/dhclient.conf') as x:
@@ -174,27 +172,26 @@ class configure(object):
                 for elements in dhclientstring:
                     dhclient.write("%s\n" % elements)
                 dhclient.close()
-                print(f"{color(bcolors.RED)}DONE :){bcolors.ENDC}")
+                print(f"{bcolors.BLUE}      [  {bcolors.CYAN}                                        {bcolors.GREEN} [ ✔ ] {bcolors.BLUE} ]{bcolors.ENDC}")
 
         else:
-            print(f'''\n{color(bcolors.RED)}squid isn't installed, install it with 'sudo apt install isc-dhcp-client'{bcolors.ENDC}''')
+            print(f"{bcolors.BLUE}      [        {bcolors.RED} squid isn't installed, install it with 'sudo apt install isc-dhcp-client' {bcolors.BLUE}            ] {bcolors.ENDC}")
             pass
 
         if os.system("which macchanger > /dev/null") == 0:
             if not os.path.exists('/etc/systemd/system/changemac@.service'):
-                print(
-                    f"{color(bcolors.RED)}No changemac@.service file is configured.....{bcolors.ENDC}{color(bcolors.GREEN)}Configuring:)")
+                print(f"{bcolors.BLUE}      [        {bcolors.RED} No changemac@.service file is configured. Configuring:) {bcolors.BLUE}            ] {bcolors.ENDC}")
                 try:
                     f = open('/etc/systemd/system/changemac@.service', 'w+')
                     for elements in changemacstring:
                         f.write("%s\n" % elements)
                     f.close()
-                    print(f"{color(bcolors.CYAN)}Done....{bcolors.ENDC}")
+                    print(f"{bcolors.BLUE}      [  {bcolors.CYAN}                                        {bcolors.GREEN} [ ✔ ] {bcolors.BLUE} ]{bcolors.ENDC}")
                 except Exception as e:
-                    print(f"{color(bcolors.RED)}Failed to write the changemac@.service file{bcolors.ENDC} \n {e}")
+                    print(f"{bcolors.BLUE}      [        {bcolors.RED} Failed to write the changemac@.service file {bcolors.BLUE}            ] {bcolors.ENDC}\n {e}")
                     pass
             else:
-                print(f"\n{color(bcolors.GREEN)}{bcolors.BOLD}Configuring changemac@.service {bcolors.ENDC}")
+                print(f"{bcolors.BLUE}      [       {bcolors.YELLOW}Configuring changemac@.service {bcolors.BLUE}            ] {bcolors.ENDC}")
                 time.sleep(0.4)
 
                 with open('/etc/systemd/system/changemac@.service') as x:
@@ -205,16 +202,15 @@ class configure(object):
                 for elements in changemacstring:
                     changemac.write("%s\n" % elements)
                 changemac.close()
-                print(f"{color(bcolors.RED)}DONE :){bcolors.ENDC}")
+                print(f"{bcolors.BLUE}      [  {bcolors.CYAN}                                        {bcolors.GREEN} [ ✔ ] {bcolors.BLUE} ]{bcolors.ENDC}")
 
         else:
-            print(f'''\n{color(bcolors.RED)}squid isn't installed, install it with 'sudo apt install macchanger'{bcolors.ENDC}''')
+            print(f"{bcolors.BLUE}      [        {bcolors.RED} Squid isn't installed, install it with 'sudo apt install macchanger' {bcolors.BLUE}      ] {bcolors.ENDC}")
             pass
 
         if os.system("which dnsmasq > /dev/null") == 0:
             if not os.path.exists('/etc/dnsmasq.conf'):
-                print(
-                    f"{color(bcolors.RED)}No dnsmasq.conf file is configured.....{bcolors.ENDC}{color(bcolors.GREEN)}Configuring:)")
+                print(f"{bcolors.BLUE}      [        {bcolors.RED} No dnsmasq.conf file is configured. Configuring:){bcolors.BLUE}      ] {bcolors.ENDC}")
                 try:
                     infile = "/etc/dnsmasq.conf"
                     outfile = "/etc/dnsmasq.conf"
@@ -228,12 +224,12 @@ class configure(object):
                         fout.write(line)
                     fin.close()
                     fout.close()
-                    print(f"{color(bcolors.CYAN)}Done....{bcolors.ENDC}")
+                    print(f"{bcolors.BLUE}      [  {bcolors.CYAN}                                        {bcolors.GREEN} [ ✔ ] {bcolors.BLUE} ]{bcolors.ENDC}")
                 except Exception as e:
-                    print(f"{color(bcolors.RED)}Failed to write the dnsmasq.conf file{bcolors.ENDC} \n {e}")
+                    print(f"{bcolors.BLUE}      [        {bcolors.RED} Failed to write the dnsmasq.conf file{bcolors.BLUE}      ] {bcolors.ENDC} \n {e}")
                     pass
             else:
-                print(f"\n{color(bcolors.GREEN)}{bcolors.BOLD}Configuring dnsmasq.conf {bcolors.ENDC}")
+                print(f"{bcolors.BLUE}      [          {bcolors.YELLOW} Configuring dnsmasq.conf{bcolors.BLUE}               ] {bcolors.ENDC}")
                 time.sleep(0.4)
                 try:
                     infile = "/etc/dnsmasq.conf"
@@ -248,13 +244,12 @@ class configure(object):
                         fout.write(line)
                     fin.close()
                     fout.close()
-                    print(f"{color(bcolors.CYAN)}Done....{bcolors.ENDC}")
+                    print(f"{bcolors.BLUE}      [  {bcolors.CYAN}                                        {bcolors.GREEN} [ ✔ ] {bcolors.BLUE} ]{bcolors.ENDC}\n")
                 except Exception as e:
-                    print(f"{color(bcolors.RED)}Failed to write the dnsmasq.conf file{bcolors.ENDC} \n {e}")
+                    print(f"\n{bcolors.BLUE}      [        {bcolors.RED} Failed to write the dnsmasq.conf file {bcolors.BLUE}      ] {bcolors.ENDC} \n {e}")
                     pass
-                print(f"{color(bcolors.RED)}DONE :){bcolors.ENDC}")
         else:
-            print(f'''\n{color(bcolors.RED)}dnsmasq isn't installed, install it with 'sudo apt install dnsmasq'{bcolors.ENDC}''')
+            print(f"{bcolors.BLUE}      [        {bcolors.RED}Dnsmasq isn't installed, install it with 'sudo apt install dnsmasq{bcolors.BLUE}      ] {bcolors.ENDC} \n {e}")
             pass
 
 config = configure()

@@ -10,7 +10,7 @@ class guide_inf(object):
             for line in guide:
                 sys.stdout.write(bcolors.GREEN + line + bcolors.ENDC)
                 sys.stdout.flush()
-                time.sleep(0.00)
+                time.sleep(0.0)
 
 guide_info = guide_inf()
 if ' __name__' == '__main__':
