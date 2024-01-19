@@ -1,5 +1,6 @@
 import sys
 import subprocess
+from modules.secmon import *
 from configs.config import *
 from src.core.banner import *
 from src.core.bcolors import *
@@ -18,14 +19,14 @@ class anonym(object):
         print(bcolors.BLUE + "   [        Squid (Install Squid set through Privoxy)        ] " + bcolors.ENDC)
         print(bcolors.BLUE + "   [       Privoxy (Install Privoxy & set through tor)       ] " + bcolors.ENDC)
         print(bcolors.ENDC + "\n         {" + bcolors.RED + bcolors.UNDERL + " apt-get install -y tor squid privoxy iptables." + bcolors.ENDC + "}\n" + bcolors.ENDC)
-        africana = bcolors.ENDC + " -{" + bcolors.YELLOW + " Installin iptables, tor, privoxy, squid, dnsmasq & configing " + bcolors.ENDC + "}-\n" + bcolors.ENDC
+        africana = bcolors.ENDC + " -{" + bcolors.YELLOW + " Installing iptables, tor, privoxy, squid, dnsmasq & configing " + bcolors.ENDC + "}-\n" + bcolors.ENDC
         for a in africana:
             sys.stdout.write(a)
             sys.stdout.flush()
             time.sleep(0.09)
         print("\n")
-        subprocess.Popen('apt-get install -y tor squid privoxy iptables', shell = True).wait(), config.configure_all()
-        subprocess.Popen('systemctl daemon-reload; systemctl enable tor@default.service; systemctl enable privoxy.service; systemctl enable squid.service; systemctl restart tor@default.service; systemctl restart privoxy.service; systemctl restart squid.service; systemctl --no-pager status tor@default.service; systemctl --no-pager status privoxy.service; systemctl --no-pager status squid.service; sleep 3', shell = True).wait()
+        os.system('apt-get update; apt-get install -y tor squid privoxy iptables isc-dhcp-client isc-dhcp-server'), config.configure_all()
+        os.system('systemctl daemon-reload; systemctl enable tor@default.service privoxy.service squid.service; systemctl restart tor@default.service privoxy.service squid.service ; systemctl --no-pager status tor@default.service privoxy.service squid.service')
 
     def vanish_start(self):
         os.system('clear')
@@ -41,7 +42,7 @@ class anonym(object):
 
     def chains_start(self):
         os.system('clear')
-        subprocess.Popen('bash modules/secmon.py', shell = True).wait()
+        sec_mon.pproxy()
 
 anonymous = anonym()
 if ' __name__' == '__main__':

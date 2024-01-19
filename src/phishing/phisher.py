@@ -21,7 +21,7 @@ class phish_hack(object):
 
     def phish_setoolkit(self):
         os.system('clear')
-        process = os.system('setoolkit')
+        process = os.system('python3 externals/set/setoolkit')
         return process
 
     def phish_anonphisher(self):

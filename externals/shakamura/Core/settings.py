@@ -100,8 +100,8 @@ class Payload_Generator_Settings:
 
 class Logging_Settings:
 
-    main_meta_folder_unix = f'{os.path.expanduser("~")}/.local/Villain_meta'
-    main_meta_folder_windows = f'{os.path.expanduser("~")}/.local/Villain_meta'
+    main_meta_folder_unix = f'{os.path.expanduser("~")}/.local/Shakamura_meta'
+    main_meta_folder_windows = f'{os.path.expanduser("~")}/.local/Shakamura_meta'
 
 
 

@@ -30,7 +30,7 @@ class update(object):
                 elif choice == '1':
                     os.system('clear')
                     print("\n")
-                    print(bcolors.ENDC + "  -{ " + bcolors.GREEN + bcolors.UNDERL + "For God so loved the world, that he gave His." + bcolors.ENDC + color() + " [John 3:16] " + bcolors.ENDC + "}-\n" + bcolors.ENDC)
+                    beauty.graphics(), scriptures.verses()
                     print(bcolors.BLUE + "   [            Installing Africana On Kali-Linux            ] " + bcolors.ENDC)
                     print(bcolors.BLUE + "   [                    Pleas Be Patient                     ] " + bcolors.ENDC)
                     print(bcolors.BLUE + "   [      Installer will copy core files to your system      ] " + bcolors.ENDC)
@@ -42,7 +42,7 @@ class update(object):
                     if os.path.exists(afric):
                         os.system('clear')
                         print("\n")
-                        print(bcolors.ENDC + "  -{ " + bcolors.GREEN + bcolors.UNDERL + "For God so loved the world, that he gave His." + bcolors.ENDC + color() + " [John 3:16] " + bcolors.ENDC + "}-\n" + bcolors.ENDC)
+                        beauty.graphics(), scriptures.verses()
                         print(bcolors.BLUE + "   [              Africana detected in your system           ] " + bcolors.ENDC)
                         print(bcolors.BLUE + "   [                   Pleas Be Patient as the               ] " + bcolors.ENDC)
                         print(bcolors.BLUE + "   [                 Installer runs full updates             ] " + bcolors.ENDC)
@@ -62,7 +62,7 @@ class update(object):
 
                         os.system('clear')
                         print("\n")
-                        print(bcolors.ENDC + "  -{ " + bcolors.GREEN + bcolors.UNDERL + "For God so loved the world, that he gave His." + bcolors.ENDC + color() + " [John 3:16] " + bcolors.ENDC + "}-\n" + bcolors.ENDC)
+                        beauty.graphics(), scriptures.verses()
                         print(bcolors.BLUE + "   [              Setting up project discovery tools         ] " + bcolors.ENDC)
                         print(bcolors.BLUE + "   [                   Pleas Be Patient as the               ] " + bcolors.ENDC)
                         print(bcolors.BLUE + "   [                      Installer runs                     ] " + bcolors.ENDC)
@@ -145,7 +145,7 @@ class update(object):
 
                         os.system('clear')
                         print("\n")
-                        print(bcolors.ENDC + "  -{ " + bcolors.GREEN + bcolors.UNDERL + "For God so loved the world, that he gave His." + bcolors.ENDC + color() + " [John 3:16] " + bcolors.ENDC + "}-\n" + bcolors.ENDC)
+                        beauty.graphics(), scriptures.verses()
                         print(bcolors.BLUE + "   [           Setting up Go, Python env @ '~/.afric'        ] " + bcolors.ENDC)
                         print(bcolors.BLUE + "   [                   Pleas Be Patient as the               ] " + bcolors.ENDC)
                         print(bcolors.BLUE + "   [                        Setup runs                       ] " + bcolors.ENDC)
@@ -177,7 +177,7 @@ class update(object):
                             try:
                                 os.system('clear')
                                 print("\n")
-                                print(bcolors.ENDC + "  -{ " + bcolors.GREEN + bcolors.UNDERL + "For God so loved the world, that he gave His." + bcolors.ENDC + color() + " [John 3:16] " + bcolors.ENDC + "}-\n" + bcolors.ENDC)
+                                beauty.graphics(), scriptures.verses()
                                 print(bcolors.BLUE + "   [              All foundation tools installed             ] " + bcolors.ENDC)
                                 print(bcolors.BLUE + "   [                 Anonymous tools installed               ] " + bcolors.ENDC)
                                 print(bcolors.BLUE + "   [               Wifi pentesting tools installed           ] " + bcolors.ENDC)
@@ -194,7 +194,7 @@ class update(object):
 
                                 os.system('clear')
                                 print("\n")
-                                print(bcolors.ENDC + "  -{ " + bcolors.GREEN + bcolors.UNDERL + "For God so loved the world, that he gave His." + bcolors.ENDC + color() + " [John 3:16] " + bcolors.ENDC + "}-\n" + bcolors.ENDC)
+                                beauty.graphics(), scriptures.verses()
                                 print(bcolors.BLUE + "   [              All foundation tools installed             ] " + bcolors.ENDC)
                                 print(bcolors.BLUE + "   [                 Anonymous tools installed               ] " + bcolors.ENDC)
                                 print(bcolors.BLUE + "   [               Wifi pentesting tools installed           ] " + bcolors.ENDC)
@@ -211,7 +211,7 @@ class update(object):
 
                                 os.system('clear')
                                 print("\n")
-                                print(bcolors.ENDC + "  -{ " + bcolors.GREEN + bcolors.UNDERL + "For God so loved the world, that he gave His." + bcolors.ENDC + color() + " [John 3:16] " + bcolors.ENDC + "}-\n" + bcolors.ENDC)
+                                beauty.graphics(), scriptures.verses()
                                 print(bcolors.BLUE + "   [              Setting up project discovery tools         ] " + bcolors.ENDC)
                                 print(bcolors.BLUE + "   [                   Pleas Be Patient as the               ] " + bcolors.ENDC)
                                 print(bcolors.BLUE + "   [                      Installer runs                     ] " + bcolors.ENDC)
@@ -526,7 +526,7 @@ class update(object):
                 else:
                     try:
                         print("\n")
-                        warn = bcolors.ENDC + "   ~{ " + bcolors.RED + "Poor Choice Of Selection!!!. Please Select " + bcolors.DARKCYAN + "0. or 1. " + bcolors.ENDC +  "}~" + bcolors.ENDC
+                        warn = bcolors.ENDC + "   ~{ " + bcolors.RED + "Poor Choice Of Selection!!!. Please Select " + bcolors.DARKCYAN + "0. to 4. " + bcolors.ENDC +  "}~" + bcolors.ENDC
                         for w in warn:
                             sys.stdout.write(w)
                             sys.stdout.flush()

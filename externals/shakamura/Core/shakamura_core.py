@@ -1401,9 +1401,9 @@ def initiate_afric_server():
         Shakamura_server.start()
         registered_services.append({
             'service' : Shakamura.server_name, 
-            'socket' : f'{ORANGE}{Shakamura_Settings.bind_address}{END}:{ORANGE}{port}{END}'
+            'socket' : f'{ORANGE}{Shakamura_Settings.bind_address}{END}:{RED}{port}{END}'
         })
-        print(f'[{ORANGE}{Shakamura_Settings.bind_address}{END}:{ORANGE}{port}{END}]::{Shakamura.server_name}')
+        print(f'[{ORANGE}{Shakamura_Settings.bind_address}{END}:{RED}{port}{END}]::{Shakamura.server_name}')
 
 
     except KeyboardInterrupt:
@@ -1818,9 +1818,9 @@ class Core_Server:
         self.core_initialized = True
         registered_services.append({
             'service' : self.server_name, 
-            'socket' : f'{ORANGE}{Core_Server_Settings.bind_address}{END}:{ORANGE}{Core_Server_Settings.bind_port}{END}'
+            'socket' : f'{ORANGE}{Core_Server_Settings.bind_address}{END}:{RED}{Core_Server_Settings.bind_port}{END}'
         })
-        print(f'\r[{ORANGE}{Core_Server_Settings.bind_address}{END}:{ORANGE}{Core_Server_Settings.bind_port}{END}]::{self.server_name}')
+        print(f'\r[{ORANGE}{Core_Server_Settings.bind_address}{END}:{RED}{Core_Server_Settings.bind_port}{END}]::{self.server_name}')
 
         # Start listening for connections
         server_socket.listen()
@@ -2320,9 +2320,9 @@ class TCP_Sock_Multi_Handler:
         self.listener_initialized = True
         registered_services.append({
             'service' : self.server_name, 
-            'socket' : f'{ORANGE}{TCP_Sock_Handler_Settings.bind_address}{END}:{ORANGE}{TCP_Sock_Handler_Settings.bind_port}{END}'
+            'socket' : f'{ORANGE}{TCP_Sock_Handler_Settings.bind_address}{END}:{RED}{TCP_Sock_Handler_Settings.bind_port}{END}'
         })
-        print(f'\r[{ORANGE}{TCP_Sock_Handler_Settings.bind_address}{END}:{ORANGE}{TCP_Sock_Handler_Settings.bind_port}{END}]::{self.server_name}')
+        print(f'\r[{ORANGE}{TCP_Sock_Handler_Settings.bind_address}{END}:{RED}{TCP_Sock_Handler_Settings.bind_port}{END}]::{self.server_name}')
 
         # Start listening for connections
         nc_server.listen()
@@ -3168,9 +3168,9 @@ class File_Smuggler:
         http_file_smuggler_server.start()
         registered_services.append({
             'service' : self.server_name, 
-            'socket' : f'{ORANGE}{File_Smuggler_Settings.bind_address}{END}:{ORANGE}{File_Smuggler_Settings.bind_port}{END}'
+            'socket' : f'{ORANGE}{File_Smuggler_Settings.bind_address}{END}:{RED}{File_Smuggler_Settings.bind_port}{END}'
         })
-        print(f'[{ORANGE}{File_Smuggler_Settings.bind_address}{END}:{ORANGE}{File_Smuggler_Settings.bind_port}{END}]::{self.server_name}\n')
+        print(f'[{ORANGE}{File_Smuggler_Settings.bind_address}{END}:{RED}{File_Smuggler_Settings.bind_port}{END}]::{self.server_name}\n')
 
 
 
