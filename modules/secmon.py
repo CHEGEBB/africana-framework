@@ -1,15 +1,18 @@
-#!/bin/bash
-clear;
+import subprocess
+from src.core.bcolors import *
 
-export BLUE='\033[1;94m'
-export GREEN='\033[1;92m'
-export RED='\033[1;91m'
-export RESETCOLOR='\033[1;00m'
+class pproxy_mon(object):
+    def __init__(self):
+        pass
+    def pproxy(self):
+        print(bcolors.RED + "\n                     Part of africana-framework" + bcolors.ENDC)
+        print(bcolors.RED + "               Your internet proxy connections routes\n" + bcolors.ENDC)
+        print(bcolors.BLUE + "    Copy & Paste " + bcolors.RED + "-> " + bcolors.YELLOW + "tail -f /var/log/privoxy/logfile " + bcolors.BLUE + "To see Your Logs" + bcolors.ENDC)
+        print(bcolors.BLUE + " Launch attack using port 8888 " + bcolors.RED + "ex. " + bcolors.GREEN + "sqlmap --proxy=http://127.0.0.1:8888" + bcolors.ENDC)
+        print(bcolors.BLUE + "\n                     -[ Your Proxy Chains ]-\n" + bcolors.ENDC)
+        print(bcolors.GREEN + "  ( Local " + bcolors.RED + "> " + bcolors.YELLOW + "8888 " + bcolors.RED + "> " + bcolors.GREEN + "Squid " + bcolors.YELLOW + "3218 " + bcolors.RED + "> " + bcolors.GREEN + "Privoxy " + bcolors.RED + "> " + bcolors.YELLOW + "8118 " + bcolors.RED + "> " + bcolors.GREEN + "Tor " + bcolors.YELLOW + "9050 " + bcolors.RED + "> " + bcolors.GREEN + "web )\n" + bcolors.ENDC)
+        process = subprocess.Popen('pproxy -r http://localhost:3128 -l http://localhost:8888 -v', shell = True).wait()
 
-echo -e "\n$RED       # Created By africana-framework. Delete At Your Own Risk!!"
-echo -e "$RED                YOUR INTERNET PROXY CONNECTIONS ROUTES.\n"
-echo -e "$BLUE Copy & Paste  -> [tail -f /var/log/privoxy/logfile] To see Your Logs]"
-echo -e "$BLUE Launch An Attack Using Port 8888 ex. [sqlmap --proxy=http://127.0.0.1:8888]\n"
-echo -e "$BLUE         To Use Launch With [proxmon] comand in your shell"
-echo -e "$BLUE        Pproxy [8888] -> Squid [3218] -> Privoxy [8118] -> Tor $GREEN [9050]\n"
-pproxy -r http://localhost:3128 -l http://localhost:8888 -vvv "$@"
+sec_mon = pproxy_mon()
+if ' __name__' == '__main__':
+        sys.exit(pproxy())

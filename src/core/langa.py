@@ -3,18 +3,21 @@ import os
 import sys
 import time
 import subprocess
+
 from signal import *
 from guide.info import *
 from urllib.parse import *
-from configs.config import *
+from modules.secmon import *
+from src.c2.malware import *
 from src.core.system import *
 from src.core.banner import *
 from src.core.bcolors import *
 from src.wireles.wifi import *
+from scriptures.verses import *
 from src.security.anonym import *
-from src.payload.malware import *
 from src.phishing.phisher import *
 from src.internal.scanner import *
+from src.passcrack.cracker import *
 from src.webattack.scanner import *
 
 class main_menu(object):
@@ -22,50 +25,53 @@ class main_menu(object):
         pass
 
     def menu_one(self):
-        beauty.dove_banner()
-        print(bcolors.BLUE + """
-+-----------------------------------------------------------------------------+
-|              † What Would You Like To Do From The Table Below ? †           |
-+-----------------------------------------------------------------------------+
-| 1. Install or Update Africana.      2. System Security Configuration.       |
-| 3. Local Network Attack Vectors.    4. Generate Undetectable Malware.       |
-| 5. Wifi Attack Vectors.             6. Crack .Pcap & BruteForce Passwords.  |
-| 7. Social-Engineering Attacks.      8. Website Attack Vectors.              |
-| 9. Help, Credits, Tricks and About. 0. Exit The Africana Pentest Framework. |
-+-----------------------------------------------------------------------------+
-""" + bcolors.ENDC)
+        beauty.graphics(), scriptures.verses()
+        print(bcolors.BLUE + "\n           -{" + bcolors.ENDC + bcolors.UNDERL + " Select a number from the table below" + bcolors.ENDC + bcolors.BLUE + " }-\n" + bcolors.ENDC)
+        print(bcolors.BLUE + "   [ 1.            Install or Update Africana                ] " + bcolors.ENDC)
+        print(bcolors.BLUE + "   [ 2.          System Security Configuration               ] " + bcolors.ENDC)
+        print(bcolors.BLUE + "   [ 3.           Local Network Attack Vectors               ] " + bcolors.ENDC)
+        print(bcolors.BLUE + "   [ 4.          Generate Undetectable Malware               ] " + bcolors.ENDC)
+        print(bcolors.BLUE + "   [ 5.               Wifi Attack Vectors                    ] " + bcolors.ENDC)
+        print(bcolors.BLUE + "   [ 6.        Crack .Pcap & BruteForce Passwords            ] " + bcolors.ENDC)
+        print(bcolors.BLUE + "   [ 7.           Social-Engineering Attacks                 ] " + bcolors.ENDC)
+        print(bcolors.BLUE + "   [ 8.              Website Attack Vectors                  ] " + bcolors.ENDC)
+        print(bcolors.BLUE + "   [ 9.         Help, Credits, Tricks and About              ] " + bcolors.ENDC)
+        print(bcolors.BLUE + "   [ 0.       Exit The Africana Pentest Framework            ] \n" + bcolors.ENDC)
 
     def menu_two(self):
-        print(bcolors.BLUE + """
-+------------------------------------------------------------------------------+
-|              † What Would You Like To Do From The Table Below ? †            |
-+------------------------------------------------------------------------------+
-| 1. Start Web W.A.F Detection.       2. Start D.N.S & Subdomain Enumration.   |
-| 3. Start Web Technology Detection.  4. Start Nuclei Vulnerbility Scanner.    |
-| 5. Start Nikto Web Vuln Scanner.    6. Start Host Root File Bruteforcer.     |
-| 7. Start SQL Injection Detection.   8. Start BBOT & Uniscan Vuln Scanner.    |
-| 9. Automate All Tools On Target.    0. Exit Web Scanner & Go To Main Menu.   |
-+------------------------------------------------------------------------------+
-""" + bcolors.ENDC)
-        
+        beauty.graphics(), scriptures.verses()
+        print(bcolors.BLUE + "\n           -{" + bcolors.ENDC + bcolors.UNDERL + " Select a number from the table below" + bcolors.ENDC + bcolors.BLUE + " }-\n" + bcolors.ENDC)
+        print(bcolors.BLUE + "   [ 1.           Recon for web wafs detection               ] " + bcolors.ENDC)
+        print(bcolors.BLUE + "   [ 2.        Start D.N.S & Subdomain Enumration            ] " + bcolors.ENDC)
+        print(bcolors.BLUE + "   [ 3.          Start Web Technology Detection              ] " + bcolors.ENDC)
+        print(bcolors.BLUE + "   [ 4.        Launch Nuclei Vulnerbility Scanner            ] " + bcolors.ENDC)
+        print(bcolors.BLUE + "   [ 5.           Start Nikto Web Vuln Scanner               ] " + bcolors.ENDC)
+        print(bcolors.BLUE + "   [ 6.         Start Host Root File Bruteforcer             ] " + bcolors.ENDC)
+        print(bcolors.BLUE + "   [ 7.           Start SQL Injection Detection              ] " + bcolors.ENDC)
+        print(bcolors.BLUE + "   [ 8.         Launch BBOT & Uniscan Vuln Scanner           ] " + bcolors.ENDC)
+        print(bcolors.BLUE + "   [ 9.            Automate All Tools On Target              ] " + bcolors.ENDC)
+        print(bcolors.BLUE + "   [ 0.         Exit Web Scanner & Go To Main Menu           ] \n" + bcolors.ENDC)
+
     def menu_three(self):
-        print(bcolors.BLUE + """
-+------------------------------------------------------------------------------+
-|              † What Would You Like To Do From The Table Below ? †            |
-+------------------------------------------------------------------------------+
-| 1. Start Network Target Discover.   2. Start Port Discovery On The Target.   |
-| 3. Start Vuln' Scanning On Target.  4. Start S.M.B Enumration On The Target. |
-| 5. Start S.M.B Exploits On Target.  6. Start Internal Packets Sniffer Tools. |
-| 7. Start Responder & Capture Hash.  8. Start Beefxss & Bettercap For M.I.B.  |
-| 9. Launch Wresharck & Sniff All.    0. Exit Internal Atta' & Go To Main Menu.|
-+------------------------------------------------------------------------------+
-""" + bcolors.ENDC)
+        beauty.graphics(), scriptures.verses()
+        print(bcolors.BLUE + "\n           -{" + bcolors.ENDC + bcolors.UNDERL + " Select a number from the table below" + bcolors.ENDC + bcolors.BLUE + " }-\n" + bcolors.ENDC)
+        print(bcolors.BLUE + "   [ 1.           Start Network Target Discover              ] " + bcolors.ENDC)
+        print(bcolors.BLUE + "   [ 2.        Start Port Discovery On The Target            ] " + bcolors.ENDC)
+        print(bcolors.BLUE + "   [ 3.          Start Vuln' Scanning On Target              ] " + bcolors.ENDC)
+        print(bcolors.BLUE + "   [ 4.       Start S.M.B Enumration On The Target           ] " + bcolors.ENDC)
+        print(bcolors.BLUE + "   [ 5.           Start S.M.B Exploits On Target             ] " + bcolors.ENDC)
+        print(bcolors.BLUE + "   [ 6.        Start Internal Packets Sniffer Tools          ] " + bcolors.ENDC)
+        print(bcolors.BLUE + "   [ 7.         Start Responder & Capture Hashes             ] " + bcolors.ENDC)
+        print(bcolors.BLUE + "   [ 8.       Start Beefxss & Bettercap For (M.I.B)          ] " + bcolors.ENDC)
+        print(bcolors.BLUE + "   [ 9.       Launch Wresharck & Sniff All Traffick          ] " + bcolors.ENDC)
+        print(bcolors.BLUE + "   [ 0.      Exit Internal Attacks & Go To Main Menu         ] \n" + bcolors.ENDC)
 mega_menu = main_menu()
 
 def sudo():
     if not os.geteuid() == 0:
         os.system('clear')
-        sys.exit(beauty.sudo_banner())
+        beauty.graphics(), scriptures.verses()
+        sys.exit(1)
 sudo ()
 
 class neo_start(object):
@@ -76,31 +82,34 @@ class neo_start(object):
         while True:
             try:
                 os.system('clear')
-                beauty.duck_banner()
-                print(bcolors.BLUE + """
-+------------------------------------------------------------------------------+
-|   † Do you Agree to Use This Tool Only for [GOOD] and not [EVIL] †           |
-+------------------------------------------------------------------------------+
-|                    Type 1. For  Yes   &   0. For  No                         |
-+------------------------------------------------------------------------------+
-""" + bcolors.ENDC)
+                beauty.graphics(), scriptures.verses()
+                print(bcolors.ENDC  + "\n                      " + bcolors.BLUE + "~[ " + bcolors.ENDC + bcolors.UNDERL + "Endless Intellect" + bcolors.ENDC + bcolors.BLUE + " ]~\n" + bcolors.ENDC)
+                print(bcolors.BLUE + "   [   Code samples are provided for " + bcolors.RED + bcolors.UNDERL + "Educational Purposes" + bcolors.ENDC + bcolors.BLUE + "    ] " + bcolors.ENDC)
+                print(bcolors.BLUE + "   [   Adequate defenses can only be built by researching    ] " + bcolors.ENDC)
+                print(bcolors.BLUE + "   [    attack techniques available to malicious actors      ] " + bcolors.ENDC)
+                print(bcolors.BLUE + "   [  Using this code against target systems without prior   ] " + bcolors.ENDC)
+                print(bcolors.BLUE + "   [      permission is illegal in most jurisdictions        ] " + bcolors.ENDC)
+                print(bcolors.BLUE + "   [ The authors are not liable for any damages from misuse  ] " + bcolors.ENDC)
+                print(bcolors.BLUE + "   [              of this information or code.               ] " + bcolors.ENDC)
+                print(bcolors.BLUE + "   [ Do you Agree to Use This Code Only for " + bcolors.ENDC + bcolors.UNDERL + "GOOD"+ bcolors.ENDC + bcolors.YELLOW + " & " + bcolors.BLUE + "not " + bcolors.RED + bcolors.UNDERL + "EVIL" + bcolors.ENDC + bcolors.BLUE + "? ] \n" + bcolors.ENDC)
+                print(bcolors.ENDC + "                  ~[ " + bcolors.BLUE + "Type: " + bcolors.RED + "1. " + bcolors.BLUE + "Accept " + bcolors.RED + "0. " + bcolors.BLUE+ "Reject " + bcolors.ENDC + " ]~\n" + bcolors.ENDC)
                 try:
-                    covenant = input(bcolors.DARKCYAN + bcolors.BOLD + "[africana] > " + bcolors.ENDC)
+                    covenant = input(bcolors.GREEN + "(" + bcolors.ENDC + "africana:" + bcolors.DARKCYAN + "framework" + bcolors.GREEN + ")# " + bcolors.ENDC)
                     if covenant == '0':
-                        beauty.banner_wise()
+                        os.system('clear')
+                        beauty.graphics(), scriptures.verses()
                         break
                     elif covenant == '1':
                         neo.one()
                         break
                     else:
                         try:
-                            os.system('clear')
-                            print(bcolors.RED + """
-+------------------------------------------------------------------------------+
-|           † Poor Choice Of Selection!!. Pleas Select [0 or 1] †              |
-+------------------------------------------------------------------------------+
-""" + bcolors.ENDC)
-                            time.sleep(3)
+                            print("\n")
+                            warn = bcolors.ENDC + "  ~{ " + bcolors.RED + "Poor choice of selection!. Please select int -> " + bcolors.DARKCYAN + "0. or 1. " + bcolors.ENDC + "}~" + bcolors.ENDC
+                            for w in warn:
+                                sys.stdout.write(w)
+                                sys.stdout.flush()
+                                time.sleep(0.09)
                             neo.user_agree()
                             break
                         except:
@@ -108,7 +117,7 @@ class neo_start(object):
                             break
                 except:
                     os.system('clear')
-                    beauty.moana_banner()
+                    beauty.graphics(), scriptures.verses()
                     break
             except:
                 break
@@ -117,7 +126,6 @@ class neo_start(object):
     def install_africana(self):
         while True:
             try:
-                os.system('clear')
                 return installer.update_system(); neo.one()
             except:
                 neo.one()
@@ -125,72 +133,79 @@ class neo_start(object):
 
 #2
     def vanish_tor(self):
-        os.system('clear')
-        beauty.ponny_banner()
-        def anonymity():
-            while True:
-                try:
-                    print(bcolors.BLUE + """
-+------------------------------------------------------------------------------+
-|        † What Do you Feel Like Doing From The Table Below ? †                |
-+------------------------------------------------------------------------------+
-| 1. Install & Setup Tor (start here). | 2. Start Anonymizing Through Tor.     |
-| 3. Stop Tor & Restore All Iptables.  + 0. Exit And Go Back To Main Menu.     |
-+------------------------------------------------------------------------------+
-""" + bcolors.ENDC)
-                    try:
-                        choice = input(bcolors.DARKCYAN + bcolors.BOLD + "[africana] > " + bcolors.ENDC)
-                    except:
-                        neo.one()
-                        break
-                    try:
-                        if choice == '0':
+        while True:
+            try:
+                os.system('clear')
+                beauty.graphics(), scriptures.verses()
+                def anonymity():
+                    while True:
+                        try:
+                            print(bcolors.BLUE + "\n            -[" + bcolors.ENDC + bcolors.UNDERL + " Select a number from the table below" + bcolors.ENDC + bcolors.BLUE + " ]-\n" + bcolors.ENDC)
+                            print(bcolors.BLUE + "   [ 1.          Install & Setup Tor (start here)            ] " + bcolors.ENDC)
+                            print(bcolors.BLUE + "   [ 2.            Start anonymizing through tor             ] " + bcolors.ENDC)
+                            print(bcolors.BLUE + "   [ 3.           Stop tor & restore all iptables            ] " + bcolors.ENDC)
+                            print(bcolors.BLUE + "   [ 4.   Chains (local => squid => privoxy => tor => net)   ] " + bcolors.ENDC)
+                            print(bcolors.BLUE + "   [ 5.                  Check if using tor                  ] " + bcolors.ENDC)
+                            print(bcolors.BLUE + "   [ 0.            Exit and go back fo main menu             ] \n" + bcolors.ENDC)
+                            choice = input(bcolors.GREEN + "(" + bcolors.ENDC + "africana:" + bcolors.DARKCYAN + "framework" + bcolors.GREEN + ")# " + bcolors.ENDC)
+                        except:
                             neo.one()
                             break
-                        elif choice == '1':
-                            try:
-                                os.system('clear')
-                                return anonymous.vanish_install(), anonymity()
-                            except:
-                                neo.vanish_tor()
+                        try:
+                            if choice == '0':
+                                neo.one()
                                 break
-                        elif choice == '2':
-                            try:
-                                os.system('clear')
-                                return anonymous.vanish_start(), anonymity()
-                            except:
-                                neo.vanish_tor()
-                                break
-                        elif choice == '3':
-                            try:
-                                os.system('clear')
-                                return anonymous.vanish_stop(), anonymity()
-                            except:
-                                neo.vanish_tor()
-                                break
-                        else:
-                            try:
-                                os.system('clear')
-                                print(bcolors.RED + """
-+------------------------------------------------------------------------------+
-|          † Poor Choice Of Selection!!. Pleas Select [0-3] †                  |
-+------------------------------------------------------------------------------+
-""" + bcolors.ENDC)
-                                time.sleep(3)
-                                os.system('clear')
-                                neo.vanish_tor()
-                                break
-                            except:
-                                neo.vanish_tor()
-                                break
-                    except:
-                        neo.vanish_tor()
-                        break
-                except:
-                    os.system('clear')
-                    beauty.hacker_banner()
-                    break
-        anonymity()
+                            elif choice == '1':
+                                try:
+                                    return anonymous.vanish_install(), anonymity()
+                                except:
+                                    neo.vanish_tor()
+                                    break
+                            elif choice == '2':
+                                try:
+                                    return anonymous.vanish_start(), anonymity()
+                                except:
+                                    neo.vanish_tor()
+                                    break
+                            elif choice == '3':
+                                try:
+                                    return anonymous.vanish_stop(), anonymity()
+                                except:
+                                    neo.vanish_tor()
+                                    break
+                            elif choice == '4':
+                                try:
+                                    return anonymous.chains_start(), anonymity()
+                                except:
+                                    neo.vanish_tor()
+                                    break
+                            elif choice == '5':
+                                try:
+                                    return anonymous.checktor_status(), anonymity()
+                                except:
+                                    neo.vanish_tor()
+                                    break
+                            else:
+                                try:
+                                    print("\n")
+                                    warn = bcolors.ENDC + "   ~{  " + bcolors.RED + " Poor Choice Of Selection!!!. Please Select " + bcolors.DARKCYAN + " from 0. to 5. " + bcolors.ENDC +  "  }~" + bcolors.ENDC
+                                    for w in warn:
+                                        sys.stdout.write(w)
+                                        sys.stdout.flush()
+                                        time.sleep(0.09)
+                                    neo.vanish_tor()
+                                    break
+                                except:
+                                    neo.vanish_tor()
+                                    break
+                        except:
+                            os.system('clear')
+                            beauty.graphics(), scriptures.verses()
+                            break
+                anonymity()
+                break
+            except:
+                break
 
 #3
     def scann_internal(self):
@@ -206,13 +221,9 @@ class neo_start(object):
             try:
                 os.system('clear')
                 neo.scann_internal()
-                print(bcolors.BLUE + """
-+------------------------------------------------------------------------------+
-|       † Selet A Target From Bettercap's Table Above To Be Attacked! †        |
-+------------------------------------------------------------------------------+
-""" + bcolors.ENDC)
+                print(bcolors.ENDC + "\n   {" + bcolors.BLUE + " Selet a target from Bettercap's table above to be Attacked! " + bcolors.ENDC + "}\n" + bcolors.ENDC)
                 try:
-                    host = input(bcolors.DARKCYAN + bcolors.BOLD + "[africana] > " + bcolors.ENDC)
+                    host = input(bcolors.GREEN + "(" + bcolors.ENDC + "africana:" + bcolors.DARKCYAN + "framework" + bcolors.GREEN + ")# " + bcolors.ENDC)
                 except:
                     neo.one()
                     break
@@ -220,20 +231,18 @@ class neo_start(object):
                 def neo_attack():
                     while True:
                         try:
-                            beauty.scatter_banner()
                             mega_menu.menu_three()
-                            choice = input(bcolors.DARKCYAN + bcolors.BOLD + "[africana] [target] = [{0}] > ".format(host) + bcolors.ENDC)
+                            print(bcolors.BLUE + "          -{ " + bcolors.RED + "ready to attack " + bcolors.BLUE + " }" + bcolors.BLUE + " => " + bcolors.BLUE + "{ " + bcolors.YELLOW + "{0}".format(host) + bcolors.BLUE + " }-\n" + bcolors.ENDC)
+                            choice = input(bcolors.GREEN + "(" + bcolors.ENDC + "africana:" + bcolors.DARKCYAN + "framework" + bcolors.GREEN + ")# " + bcolors.ENDC)
                         except:
                             neo.one()
                             break
                         try:
-                            os.system('clear')
                             if choice == '0':
                                 neo.one()
                                 break
                             elif choice == '1':
                                 try:
-                                    os.system('clear')
                                     return neo.attack_internal()
                                 except:
                                     attack_internal.neo_attack()
@@ -268,37 +277,40 @@ class neo_start(object):
                                     break
                             elif choice == '6':
                                 try:
+                                    os.system('clear')
                                     return internal_scanner.packets_sniffer(host), attack_internal.neo_attack()
                                 except:
                                     attack_internal.neo_attack()
                                     break
                             elif choice == '7':
                                 try:
+                                    os.system('clear')
                                     return internal_scanner.packets_responder(), attack_internal.neo_attack()
                                 except:
                                     attack_internal.neo_attack()
                                     break
                             elif choice == '8':
                                 try:
+                                    os.system('clear')
                                     return internal_scanner.beefxss_bettercap(host), attack_internal.neo_attack()
                                 except:
                                     attack_internal.neo_attack()
                                     break
                             elif choice == '9':
                                 try:
+                                    os.system('clear')
                                     return internal_scanner.packets_wireshark(), attack_internal.neo_attack()
                                 except:
                                     attack_internal.neo_attack()
                                     break
                             else:
                                 try:
-                                    os.system('clear')
-                                    print(bcolors.RED + """
-+------------------------------------------------------------------------------+
-|            † Poor Choice  Of Selection!!. Pleas Select [0-9] †               |
-+------------------------------------------------------------------------------+
-""" + bcolors.ENDC)
-                                    time.sleep(3)
+                                    print("\n")
+                                    warn = bcolors.ENDC + "   ~{  " + bcolors.RED + " Poor Choice Of Selection!!!. Please Select " + bcolors.DARKCYAN + " from 0. to 9. " + bcolors.ENDC +  "  }~" + bcolors.ENDC
+                                    for w in warn:
+                                        sys.stdout.write(w)
+                                        sys.stdout.flush()
+                                        time.sleep(0.09)
                                     attack_internal.neo_attack()
                                     break
                                 except:
@@ -312,7 +324,7 @@ class neo_start(object):
                 break
             except:
                 os.system('clear')
-                beauty.hacker_banner()
+                beauty.graphics(), scriptures.verses()
                 break
 
 #4
@@ -320,90 +332,77 @@ class neo_start(object):
         while True:
             try:
                 os.system('clear')
-                beauty.scorpion_banner()
-                print(bcolors.BLUE + """
-+------------------------------------------------------------------------------+
-|                † Africana Malware Generation Menu †                          |
-+------------------------------------------------------------------------------+
-|  Type  1. Windows,Linux,Mac Shells  2. Android Attack  0.  Back To Main      |
-+------------------------------------------------------------------------------+
-""" + bcolors.ENDC)
+                beauty.graphics(), scriptures.verses()
+                print(bcolors.BLUE + "\n           -[" + bcolors.ENDC + bcolors.UNDERL + " Select a number from the table below" + bcolors.ENDC + bcolors.BLUE + " ]-\n" + bcolors.ENDC)
+                print(bcolors.BLUE + "   [ 1.             Shellz (All Distro R.A.T)                ] " + bcolors.ENDC)
+                print(bcolors.BLUE + "   [ 2.       Shakamura (Windows Rev Shells)" + bcolors.RED + "(try Me)" + bcolors.BLUE + "         ] " + bcolors.ENDC)
+                print(bcolors.BLUE + "   [ 3.          PowerJoker (Windows Rev Shells)             ] " + bcolors.ENDC)
+                print(bcolors.BLUE + "   [ 4.         MeterPeter (Windows Powershell C2)           ] " + bcolors.ENDC)
+                print(bcolors.BLUE + "   [ 5.  Havoc C2 Default(user: 5pider pass: password1234)   ] " + bcolors.ENDC)
+                print(bcolors.BLUE + "   [ 6.               Teardroid (Android Rat)                ] " + bcolors.ENDC)
+                print(bcolors.BLUE + "   [ 7.          AndroRAT (Android 4 -> 10 Rat )             ] " + bcolors.ENDC)
+                print(bcolors.BLUE + "   [ 8.                       To Add                         ] " + bcolors.ENDC)
+                print(bcolors.BLUE + "   [ 9.                       To Add                         ] " + bcolors.ENDC)
+                print(bcolors.BLUE + "   [ 0.              Exit & Go To Main Menu                  ] \n" + bcolors.ENDC)
                 try:
-                    choice = input(bcolors.DARKCYAN + bcolors.BOLD + "[africana] > " + bcolors.ENDC)
+                    choice = input(bcolors.GREEN + "(" + bcolors.ENDC + "africana:" + bcolors.DARKCYAN + "framework" + bcolors.GREEN + ")# " + bcolors.ENDC)
                 except:
                     neo.one()
                     break
                 try:
-                    os.system('clear')
                     if choice == '0':
                         neo.one()
                         break
                     elif choice == '1':
-                        beauty.cross_banner()
-                        print(bcolors.BLUE + """
-+------------------------------------------------------------------------------+
-|                † Africana Malware Generation Menu †                          |
-+------------------------------------------------------------------------------+
-| Type   1. Launch Hoax 2. Launch Villain  3. Launch Shellz    0. Go To Main   |
-+------------------------------------------------------------------------------+
-""" + bcolors.ENDC)
                         try:
-                            select = input(bcolors.DARKCYAN + bcolors.BOLD + "[africana] > " + bcolors.ENDC)
+                            return rat.shellz(), neo.rat_kitchen()
                         except:
                             neo.rat_kitchen()
                             break
-                        if select == '0':
+                    elif choice == '2':
+                        try:
+                            return rat.shakamura(), neo.rat_kitchen()
+                        except:
                             neo.rat_kitchen()
                             break
-                        elif select == '1':
-                            try:
-                                return rat.hoaxshell(), neo.rat_kitchen()
-                            except:
-                                neo.rat_kitchen()
-                                break
-                        elif select == '2':
-                            try:
-                                return rat.villain(), neo.rat_kitchen()
-                            except:
-                                neo.rat_kitchen()
-                                break
-                        elif select == '3':
-                            try:
-                                return rat.kitchen(), neo.rat_kitchen()
-                            except:
-                                neo.rat_kitchen()
-                                break
-                        else:
-                            try:
-                                os.system('clear')
-                                print(bcolors.RED + """
-+------------------------------------------------------------------------------+
-|            † Poor Choice Of Selection!!. Pleas Select [0-2] †                |
-+------------------------------------------------------------------------------+
-""" + bcolors.ENDC)
-                                time.sleep(3)
-                                os.system('clear')
-                                neo.rat_kitchen(self)
-                                break
-                            except:
-                                neo.rat_kitchen()
-                                break
-                    elif choice == '2':
+                    elif choice == '3':
+                        try:
+                            return rat.powerjoker(), neo.rat_kitchen()
+                        except:
+                            neo.rat_kitchen()
+                            break
+                    elif choice == '4':
+                        try:
+                            return rat.meterpeter(), neo.rat_kitchen()
+                        except:
+                            neo.rat_kitchen()
+                            break
+                    elif choice == '5':
+                        try:
+                            return rat.havoc(), neo.rat_kitchen()
+                        except:
+                            neo.rat_kitchen()
+                            break
+                    elif choice == '6':
                         try:
                             return rat.teardroid(), neo.rat_kitchen()
                         except:
                             neo.rat_kitchen()
                             break
+                    elif choice == '7':
+                        try:
+                            return rat.androrat(), neo.rat_kitchen()
+                        except:
+                            neo.rat_kitchen()
+                            break
                     else:
                         try:
-                            os.system('clear')
-                            print(bcolors.RED + """
-+------------------------------------------------------------------------------+
-|           † Poor Choice Of Selection!!. Pleas Select [0-2] †                 |
-+------------------------------------------------------------------------------+
-""" + bcolors.ENDC)
-                            time.sleep(3)
-                            os.system('clear')
+                            print("\n")
+                            warn = bcolors.ENDC + "   ~{  " + bcolors.RED + " Poor Choice Of Selection!!!. Please Select " + bcolors.DARKCYAN + " from 0. to 9. " + bcolors.ENDC + "  }~" + bcolors.ENDC
+                            for w in warn:
+                                sys.stdout.write(w)
+                                sys.stdout.flush()
+                                time.sleep(0.09)
                             neo.rat_kitchen()
                             break
                         except:
@@ -411,7 +410,7 @@ class neo_start(object):
                             break
                 except:
                     os.system('clear')
-                    beauty.wolf_banner()
+                    beauty.graphics(), scriptures.verses()
                     break
             except:
                 break
@@ -421,129 +420,98 @@ class neo_start(object):
         while True:
             try:
                 os.system('clear')
-                beauty.wolf_banner()
-                print(bcolors.BLUE + """
-+------------------------------------------------------------------------------+
-|                      † Africana wifi Pentesting Menu †                       |
-+------------------------------------------------------------------------------+
-|  Type  1. For Automated Attack   2. For Manual Attack   0. Back To Main      |
-+------------------------------------------------------------------------------+
-""" + bcolors.ENDC)
+                beauty.graphics(), scriptures.verses()
+                print(bcolors.BLUE + "\n            -[" + bcolors.ENDC + bcolors.UNDERL + " Select a number from the table below" + bcolors.ENDC + bcolors.BLUE + " ]-\n" + bcolors.ENDC)
+                print(bcolors.BLUE + "   [ 1.         Wifite (All Wifi Hacks)(Automated)           ] " + bcolors.ENDC)
+                print(bcolors.BLUE + "   [ 2.        Bettercap (Few Wifi Hacks)(Automated)         ] " + bcolors.ENDC)
+                print(bcolors.BLUE + "   [ 3.      Wifipumpkin3 (Wifi Cred Phish)(Automated)       ] " + bcolors.ENDC)
+                print(bcolors.BLUE + "   [ 4.                       To Add                         ] " + bcolors.ENDC)
+                print(bcolors.BLUE + "   [ 5.                       To Add                         ] " + bcolors.ENDC)
+                print(bcolors.BLUE + "   [ 6.                  Airgeddon (Manual)                  ] " + bcolors.ENDC)
+                print(bcolors.BLUE + "   [ 7.        wifiPumpkin3 (Wifi Cred Phish)(Manual)        ] " + bcolors.ENDC)
+                print(bcolors.BLUE + "   [ 8.                       To Add                         ] " + bcolors.ENDC)
+                print(bcolors.BLUE + "   [ 9.                       To Add                         ] " + bcolors.ENDC)
+                print(bcolors.BLUE + "   [ 0.              Exit & Go To Main Menu                  ] \n" + bcolors.ENDC)
                 try:
-                    choice = input(bcolors.DARKCYAN + bcolors.BOLD + "[africana] > " + bcolors.ENDC)
+                    choice = input(bcolors.GREEN + "(" + bcolors.ENDC + "africana:" + bcolors.DARKCYAN + "framework" + bcolors.GREEN + ")# " + bcolors.ENDC)
                 except:
                     neo.one()
                     break
                 try:
-                    os.system('clear')
-                    beauty.bear_banner()
                     if choice == '0':
                         neo.one()
                         break
                     elif choice == '1':
-                        print(bcolors.BLUE + """
-+------------------------------------------------------------------------------+
-|                    † Africana wifi Pentesting Menu †                         |
-+------------------------------------------------------------------------------+
-| Type 1. With Bettercap  2. With Wifite  3. With Wifipumpkin  0. Back To Menu |
-+------------------------------------------------------------------------------+
-""" + bcolors.ENDC)
                         try:
-                            select = input(bcolors.DARKCYAN + bcolors.BOLD + "[africana] > " + bcolors.ENDC)
+                            return wifi_killer.wifi_auto_attack_wifite(), neo.attack_wifi()
                         except:
                             neo.attack_wifi()
                             break
-                        if select == '0':
-                            neo.attack_wifi()
-                            break
-                        elif select == '1':
-                            try:
-                                os.system('clear')
-                                return wifi_killer.wifi_attack_bettercap(), neo.attack_wifi()
-                            except:
-                                neo.attack_wifi()
-                                break
-                        elif select == '2':
-                            try:
-                                os.system('clear')
-                                return wifi_killer.wifi_attack_wifite(), neo.attack_wifi()
-                            except:
-                                neo.attack_wifi()
-                                break
-                        elif select == '3':
-                            try:
-                                os.system('clear')
-                                return wifi_killer.wifi_auto_attack_wifipumpkin3(), neo.attack_wifi()
-                            except:
-                                neo.attack_wifi()
-                                break
-                        else:
-                            try:
-                                os.system('clear')
-                                print(bcolors.RED + """
-+------------------------------------------------------------------------------+
-|         † Poor Choice  Of Selection!!. Pleas Select [0-2] †                  |
-+------------------------------------------------------------------------------+
-""" + bcolors.ENDC)
-                                time.sleep(3)
-                                neo.attack_wifi()
-                                break
-                            except:
-                                neo.attack_wifi()
-                                break
                     elif choice == '2':
-                        print(bcolors.BLUE + """
-+------------------------------------------------------------------------------+
-|                       † Africana wifi Pentesting Menu †                      |
-+------------------------------------------------------------------------------+
-|   Type   1. With Airgeddon   2. With wifiPumpkin3   0. Back To Main          |
-+------------------------------------------------------------------------------+
-""" + bcolors.ENDC)
                         try:
-                            select = input(bcolors.DARKCYAN + bcolors.BOLD + "[africana] > " + bcolors.ENDC)
+                            return wifi_killer.wifi_auto_attack_bettercap(), neo.attack_wifi()
                         except:
                             neo.attack_wifi()
                             break
-                        if select == '0':
+                    elif choice == '3':
+                        try:
+                            return wifi_killer.wifi_auto_attack_wifipumpkin3(), neo.attack_wifi()
+                        except:
                             neo.attack_wifi()
                             break
-                        elif select == '1':
-                            try:
-                                os.system('clear')
-                                return wifi_killer.wifi_attack_airgeddon(), neo.attack_wifi()
-                            except:
-                                neo.attack_wifi()
-                                break
-                        elif select == '2':
-                            try:
-                                os.system('clear')
-                                return wifi_killer.wifi_attack_wifipumpkin3(), neo.attack_wifi()
-                            except:
-                                neo.attack_wifi()
-                                break
-                        else:
-                            try:
-                                os.system('clear')
-                                print(bcolors.RED + """
-+------------------------------------------------------------------------------+
-|       † Poor Choice  Of Selection!!. Pleas Select [0-2] †                    |
-+------------------------------------------------------------------------------+
-""" + bcolors.ENDC)
-                                time.sleep(3)
-                                neo.attack_wifi()
-                                break
-                            except:
-                                neo.attack_wifi()
-                                break
+                    elif choice == '4':
+                        try:
+                            pass
+                                #return wifi_killer.wifi_attack_airgeddon(), neo.attack_wifi()
+                        except:
+                                #neo.attack_wifi()
+                                #break
+                            pass
+                    elif choice == '5':
+                        try:
+                            pass
+                                #return wifi_killer.wifi_attack_airgeddon(), neo.attack_wifi()
+                        except:
+                                #neo.attack_wifi()
+                                #break
+                            pass
+                    elif choice == '6':
+                        try:
+                            return wifi_killer.wifi_attack_airgeddon(), neo.attack_wifi()
+                        except:
+                            neo.attack_wifi()
+                            break
+                    elif choice == '7':
+                        try:
+                            return wifi_killer.wifi_attack_wifipumpkin3(), neo.attack_wifi()
+                        except:
+                            neo.attack_wifi()
+                            break
+                    elif choice == '8':
+                        try:
+                            pass
+                                #return wifi_killer.wifi_attack_airgeddon(), neo.attack_wifi()
+                        except:
+                                #neo.attack_wifi()
+                                #break
+                            pass
+                    elif choice == '9':
+                        try:
+                            pass
+                                #return wifi_killer.wifi_attack_airgeddon(), neo.attack_wifi()
+                        except:
+                                #neo.attack_wifi()
+                                #break
+                            pass
+
                     else:
                         try:
-                            os.system('clear')
-                            print(bcolors.RED + """
-+------------------------------------------------------------------------------+
-|       † Poor Choice  Of Selection!!. Pleas Select [0-2] †                    |
-+------------------------------------------------------------------------------+
-""" + bcolors.ENDC)
-                            time.sleep(3)
+                            print("\n")
+                            warn = bcolors.ENDC + "   ~{  " + bcolors.RED + " Poor Choice Of Selection!!!. Please Select " + bcolors.DARKCYAN + " from 0. to 9. " + bcolors.ENDC + "  }~" + bcolors.ENDC
+                            for w in warn:
+                                sys.stdout.write(w)
+                                sys.stdout.flush()
+                                time.sleep(0.09)
                             neo.attack_wifi()
                             break
                         except:
@@ -551,7 +519,7 @@ class neo_start(object):
                             break
                 except:
                     os.system('clear')
-                    beauty.volture_banner()
+                    beauty.graphics(), scriptures.verses()
                     break
             except:
                 break
@@ -561,16 +529,20 @@ class neo_start(object):
         while True:
             try:
                 os.system('clear')
-                beauty.prawn_banner()
-                print(bcolors.BLUE + """
-+------------------------------------------------------------------------------+
-|         † Welcome To Password Cracking And Generation Sector †               |
-+------------------------------------------------------------------------------+
-| Type   1. Crack Using Air-Crackng   2. Use John   0. Back To Main            |
-+------------------------------------------------------------------------------+
-""" + bcolors.ENDC)
+                beauty.graphics(), scriptures.verses()
+                print(bcolors.BLUE + "\n            -{" + bcolors.ENDC + bcolors.UNDERL + " Select a number from the table below" + bcolors.ENDC + bcolors.BLUE + " }-\n" + bcolors.ENDC)
+                print(bcolors.BLUE + "   [ 1.       Air-Crackng  (All Wifi .Pcap)(Automated)       ] " + bcolors.ENDC)
+                print(bcolors.BLUE + "   [ 2.            John (Password)(Automated)                ] " + bcolors.ENDC)
+                print(bcolors.BLUE + "   [ 3.                       To Add                         ] " + bcolors.ENDC)
+                print(bcolors.BLUE + "   [ 4.                       To Add                         ] " + bcolors.ENDC)
+                print(bcolors.BLUE + "   [ 5.                       To Add                         ] " + bcolors.ENDC)
+                print(bcolors.BLUE + "   [ 6.                       To Add                         ] " + bcolors.ENDC)
+                print(bcolors.BLUE + "   [ 7.                       To Add                         ] " + bcolors.ENDC)
+                print(bcolors.BLUE + "   [ 8.                       To Add                         ] " + bcolors.ENDC)
+                print(bcolors.BLUE + "   [ 9.                       To Add                         ] " + bcolors.ENDC)
+                print(bcolors.BLUE + "   [ 0.              Exit & Go To Main Menu                  ] \n" + bcolors.ENDC)
                 try:
-                    choice = input(bcolors.DARKCYAN + bcolors.BOLD + "[africana] > " + bcolors.ENDC)
+                    choice = input(bcolors.GREEN + "(" + bcolors.ENDC + "africana:" + bcolors.DARKCYAN + "framework" + bcolors.GREEN + ")# " + bcolors.ENDC)
                 except:
                     neo.one()
                     break
@@ -580,25 +552,24 @@ class neo_start(object):
                         break
                     elif choice == '1':
                         try:
-                            return wifi_killer.aircrackng_password(), neo.crack_passwords()
+                            return pass_cracker.aircracking_password(), neo.crack_passwords()
                         except:
                             neo.crack_passwords()
                             break
                     elif choice == '2':
                         try:
-                            return wifi_killer.john_password(), neo.crack_passwords()
+                            return pass_cracker.john_password(), neo.crack_passwords()
                         except:
                             neo.crack_passwords()
                             break
                     else:
                         try:
-                            os.system('clear')
-                            print(bcolors.RED + """
-+------------------------------------------------------------------------------+
-|           † Poor Choice Of Selection!!. Pleas Select [0-2] †                 |
-+------------------------------------------------------------------------------+
-""" + bcolors.ENDC)
-                            time.sleep(3)
+                            print("\n")
+                            warn = bcolors.ENDC + "   ~{  " + bcolors.RED + " Poor Choice Of Selection!!!. Please Select " + bcolors.DARKCYAN + "from 0. to 9. " + bcolors.ENDC + "}~" + bcolors.ENDC
+                            for w in warn:
+                                sys.stdout.write(w)
+                                sys.stdout.flush()
+                                time.sleep(0.09)
                             neo.crack_passwords()
                             break
                         except:
@@ -606,7 +577,7 @@ class neo_start(object):
                             break
                 except:
                     os.system('clear')
-                    beauty.scatter_banner()
+                    beauty.graphics(), scriptures.verses()
                     break
             except:
                 break
@@ -616,17 +587,20 @@ class neo_start(object):
         while True:
             try:
                 os.system('clear')
-                beauty.dog_banner()
-                print(bcolors.BLUE + """
-+------------------------------------------------------------------------------+
-|        † What Tool Would You Like To Use From The Table Below ? †            |
-+------------------------------------------------------------------------------+
-| 1. Gophish                           | 2. Good Ginx       5. Anonphisher     |
-| 3. AdvPhishing                       + 4. Setoolkit       0. Go to Main Menu |
-+------------------------------------------------------------------------------+
-""" + bcolors.ENDC)
+                beauty.graphics(), scriptures.verses()
+                print(bcolors.BLUE + "\n            -{" + bcolors.ENDC + bcolors.UNDERL + " Select a number from the table below" + bcolors.ENDC + bcolors.BLUE + " }-\n" + bcolors.ENDC)
+                print(bcolors.BLUE + "   [ 1.         Gophish(Browser Gui)(All Templetes)          ] " + bcolors.ENDC)
+                print(bcolors.BLUE + "   [ 2.           Good Ginx (Advanced)(OTP Bypass)           ] " + bcolors.ENDC)
+                print(bcolors.BLUE + "   [ 3.                AdvPhishing(OTP Bypass)               ] " + bcolors.ENDC)
+                print(bcolors.BLUE + "   [ 4.               Setoolkit(Clones Website)              ] " + bcolors.ENDC)
+                print(bcolors.BLUE + "   [ 5.                Anonphisher(OTP Bypass)               ] " + bcolors.ENDC)
+                print(bcolors.BLUE + "   [ 6.                       To Add                         ] " + bcolors.ENDC)
+                print(bcolors.BLUE + "   [ 7.                       To Add                         ] " + bcolors.ENDC)
+                print(bcolors.BLUE + "   [ 8.                       To Add                         ] " + bcolors.ENDC)
+                print(bcolors.BLUE + "   [ 9.                       To Add                         ] " + bcolors.ENDC)
+                print(bcolors.BLUE + "   [ 0.              Exit & Go To Main Menu                  ] \n" + bcolors.ENDC)
                 try:
-                    choice = input(bcolors.DARKCYAN + bcolors.BOLD + "[africana] > " + bcolors.ENDC)
+                    choice = input(bcolors.GREEN + "(" + bcolors.ENDC + "africana:" + bcolors.DARKCYAN + "framework" + bcolors.GREEN + ")# " + bcolors.ENDC)
                 except:
                     neo.one()
                     break
@@ -635,60 +609,30 @@ class neo_start(object):
                         neo.one()
                         break
                     elif choice == '1':
-                        os.system('clear')
-                        print(bcolors.BLUE + """
-+------------------------------------------------------------------------------+
-|                † Launching Go Phish At YOUR IP : 3333 ? †                    |
-+------------------------------------------------------------------------------+
-""" + bcolors.ENDC)
                         try:
                             return cred_phisher.phish_gophish(), neo.phish_creds()
                         except:
                             neo.phish_creds()
                             break
                     elif choice == '2':
-                        os.system('clear')
-                        print(bcolors.BLUE + """
-+------------------------------------------------------------------------------+
-|                † Launching GoodGinx Work For Good Not Evil ? †               |
-+------------------------------------------------------------------------------+
-""" + bcolors.ENDC)
                         try:
                             return cred_phisher.phish_goodginx(), neo.phish_creds()
                         except:
                             neo.phish_creds()
                             break
                     elif choice == '3':
-                        os.system('clear')
-                        print(bcolors.BLUE + """
-+------------------------------------------------------------------------------+
-|    † Launching AdvPhishing Tool. Pleas Work For Good Not Evil ? †            |
-+------------------------------------------------------------------------------+
-""" + bcolors.ENDC)
                         try:
                             return cred_phisher.phish_zphisher(), neo.phish_creds()
                         except:
                             neo.phish_creds()
                             break
                     elif choice == '4':
-                        os.system('clear')
-                        print(bcolors.BLUE + """
-+------------------------------------------------------------------------------+
-|        † Launching Setoolkit Tool. Pleas Work For Good Not Evil ? †          |
-+------------------------------------------------------------------------------+
-""" + bcolors.ENDC)
                         try:
                             return cred_phisher.phish_setoolkit(), neo.phish_creds()
                         except:
                             neo.phish_creds()
                             break
                     elif choice == '5':
-                        os.system('clear')
-                        print(bcolors.BLUE + """
-+------------------------------------------------------------------------------+
-|        † Launching Anonphisher Tool. Pleas Work For Good Not Evil ? †        |
-+------------------------------------------------------------------------------+
-""" + bcolors.ENDC)
                         try:
                             return cred_phisher.phish_anonphisher(), neo.phish_creds()
                         except:
@@ -696,13 +640,12 @@ class neo_start(object):
                             break
                     else:
                         try:
-                            os.system('clear')
-                            print(bcolors.RED + """
-+------------------------------------------------------------------------------+
-|          † Poor Choice Of Selection!!. Pleas Select [0-3] †                  |
-+------------------------------------------------------------------------------+
-""" + bcolors.ENDC)
-                            time.sleep(3)
+                            print("\n")
+                            warn = bcolors.ENDC + "   ~{  " + bcolors.RED + " Poor Choice Of Selection!!!. Please Select " + bcolors.DARKCYAN + "from 0. to 9. " + bcolors.ENDC + "  }~" + bcolors.ENDC
+                            for w in warn:
+                                sys.stdout.write(w)
+                                sys.stdout.flush()
+                                time.sleep(0.09)
                             neo.phish_creds()
                             break
                         except:
@@ -710,7 +653,7 @@ class neo_start(object):
                             break
                 except:
                     os.system('clear')
-                    beauty.squid_banner()
+                    beauty.graphics(), scriptures.verses()
                     break
             except:
                 break
@@ -720,14 +663,10 @@ class neo_start(object):
         while True:
             try:
                 os.system('clear')
-                beauty.be_banner()
-                print(bcolors.BLUE + """
-+------------------------------------------------------------------------------+
-|        † Enter Your Target [Either HTTP(S)//: HostName OR IP]. †             |
-+------------------------------------------------------------------------------+
-""" + bcolors.ENDC)
+                beauty.graphics(), scriptures.verses()
+                print(bcolors.ENDC + "\n     {" + bcolors.BLUE + " Enter Your Target (Either HTTP(S)//: HostName OR IP) " + bcolors.ENDC + "}\n" + bcolors.ENDC)
                 try:
-                    url = input(bcolors.DARKCYAN + bcolors.BOLD + "[africana] > " + bcolors.ENDC)
+                    url = input(bcolors.GREEN + "(" + bcolors.ENDC + "africana:" + bcolors.DARKCYAN + "framework" + bcolors.GREEN + ")# " + bcolors.ENDC)
                 except:
                     neo.one()
                     break
@@ -743,11 +682,11 @@ class neo_start(object):
                 spiders = scanners(host = '')
                 os.system('clear')
                 def user_nuke(self):
-                    beauty.web_banner()
                     mega_menu.menu_two()
+                    print(bcolors.BLUE + "          -{ " + bcolors.RED + "ready to attack " + bcolors.BLUE + " }" + bcolors.BLUE + " => " + bcolors.BLUE + "{ " + bcolors.YELLOW + "{0}".format(host) + bcolors.BLUE + " }-\n" + bcolors.ENDC)
                     while True:
                         try:
-                            choice = input(bcolors.DARKCYAN + bcolors.BOLD + "[africana] [Target] = [{0}] > ".format(host) + bcolors.ENDC)
+                            choice = input(bcolors.GREEN + "(" + bcolors.ENDC + "africana:" + bcolors.DARKCYAN + "framework" + bcolors.GREEN + ")# " + bcolors.ENDC)
                         except:
                             neo.one()
                             break
@@ -826,13 +765,12 @@ class neo_start(object):
                                     break
                             else:
                                 try:
-                                    os.system('clear')
-                                    print(bcolors.RED + """
-+------------------------------------------------------------------------------+
-|            † Poor Choice  Of Selection!!. Pleas Select [0-9] †               |
-+------------------------------------------------------------------------------+
-""" + bcolors.ENDC)
-                                    time.sleep(3)
+                                    print("\n")
+                                    warn = bcolors.ENDC + "   ~{  " + bcolors.RED + " Poor Choice Of Selection!!!. Please Select " + bcolors.DARKCYAN + " from 0. to 9. " + bcolors.ENDC + "  }~" + bcolors.ENDC
+                                    for w in warn:
+                                        sys.stdout.write(w)
+                                        sys.stdout.flush()
+                                        time.sleep(0.09)
                                     attack_websites.user_nuke(self)
                                     break
                                 except:
@@ -841,7 +779,7 @@ class neo_start(object):
                                     break
                         except:
                             os.system('clear')
-                            beauty.ponny_banner()
+                            beauty.graphics(), scriptures.verses()
                             break
                 user_nuke(self)
                 break
@@ -854,32 +792,31 @@ class neo_start(object):
             try:
                 os.system('clear')
                 guide_info.guide()
-                about = bcolors.BLUE + """
-+------------------------------------------------------------------------------+
-|                         † About The Author †                                 |
-+------------------------------------------------------------------------------+
-|        I am Rojahs Montari. A devoted Christian Studied Education In         |
-|         Kenyatta University Kenya. Got Persionate In Cybersecurity           |
-|        I Then Furthered My Skills By Research, Practice & Expirience.        |
-|                      Thanks To Ippsec Hack TheBox.                           |
-|   I Am Working As A Teacher, Cybersecurity Consoltant, Software Enginear.    |
-|                 Contactme at rojahsmontari@gmail.com                         |
-|            Youtube Channel https://youtube.com/@RojahsMontari                |
-+------------------------------------------------------------------------------+
-|                Click Enter or 0).Back To Main Menu. <---'                    |
-+------------------------------------------------------------------------------+
 
-""" + bcolors.ENDC
-                for a in about:
-                    sys.stdout.write(a)
+                beauty.graphics(), scriptures.verses()
+                print("\n")
+                print(bcolors.BLUE + "   [    I am Rojahs Montari. " + bcolors.YELLOW + "A devoted Christian Studied " + bcolors.BLUE + "    ] " + bcolors.ENDC)
+                print(bcolors.BLUE + "   [       Education In Kenyatta University Kenya. Got       ] " + bcolors.ENDC)
+                print(bcolors.BLUE + "   [              Passionate In Cybersecurity                ] " + bcolors.ENDC)
+                print(bcolors.BLUE + "   [ I Then Furthered My Skills By Research, Practice &      ] " + bcolors.ENDC)
+                print(bcolors.BLUE + "   [                      Experience.                        ] " + bcolors.ENDC)
+                print(bcolors.BLUE + "   [    I Am Working As A Teacher, Cybersecurity Consoltant  ] " + bcolors.ENDC)
+                print(bcolors.BLUE + "   [                 & Software Enginear.                    ] " + bcolors.ENDC)
+                print(bcolors.BLUE + "   [           Contact me at rojahsmontari@gmail.com         ] " + bcolors.ENDC)
+                print(bcolors.BLUE + "   [   Youtube Channel" + bcolors.RED + " https://youtube.com/@RojahsMontari" + bcolors.BLUE + "    ] \n" + bcolors.ENDC)
+                print(bcolors.ENDC + "     -{ " + bcolors.BLUE + " Click " + bcolors.PURPLE + "Enter" + bcolors.YELLOW + " or " + bcolors.PURPLE + "0. " + bcolors.BLUE + "To Go Back To Main Menu. " + bcolors.PURPLE + "<---'" + bcolors.ENDC + " }- \n" + bcolors.ENDC)
+                salvation =  bcolors.ENDC + "  -{ " + bcolors.GREEN + bcolors.UNDERL + "For God so loved the world, that he gave His." + bcolors.ENDC + color() + " [John 3:16] " + bcolors.ENDC + "}- " + bcolors.ENDC
+                for s in salvation:
+                    sys.stdout.write(s)
                     sys.stdout.flush()
-                    time.sleep(0.03)
+                    time.sleep(0.09)
+                print("\n")
             except:
                 neo.one()
                 break
 
             try:
-                choice = input(bcolors.DARKCYAN + bcolors.BOLD + "[africana] > " + bcolors.ENDC)
+                choice = input(bcolors.GREEN + "(" + bcolors.ENDC + "africana:" + bcolors.DARKCYAN + "framework" + bcolors.GREEN + ")# " + bcolors.ENDC)
                 if choice == '0':
                     neo.one()
                     break
@@ -897,15 +834,15 @@ class neo_start(object):
                 os.system('clear')
                 mega_menu.menu_one()
                 try:
-                    choice = input(bcolors.DARKCYAN + bcolors.BOLD + "[africana] > " + bcolors.ENDC)
+                    choice = input(bcolors.GREEN + "(" + bcolors.ENDC + "africana:" + bcolors.DARKCYAN + "framework" + bcolors.GREEN + ")# " + bcolors.ENDC)
                 except:
                     os.system('clear')
-                    beauty.pill_banner()
+                    beauty.graphics(), scriptures.verses()
                     break
                 try:
                     if choice == '0':
                         os.system('clear')
-                        beauty.wise_banner()
+                        beauty.graphics(), scriptures.verses()
                         break
                     elif choice == '1':
                         try:
@@ -953,16 +890,13 @@ class neo_start(object):
                         except:
                             break
                     else:
-                        os.system('clear')
-                        print(bcolors.RED + """
-+------------------------------------------------------------------------------+
-|           † Poor Choice Of Selection!!. Pleas Select [0-9] †                 |
-+------------------------------------------------------------------------------+
-""" + bcolors.ENDC)
-                        time.sleep(3)
                         try:
-                            neo.one()
-                            break
+                            print("\n")
+                            warn = bcolors.ENDC + "  ~{ " + bcolors.RED + "Poor Choice Of Selection. Please Select ->" + bcolors.DARKCYAN + " from 0. to 9. " + bcolors.ENDC + "}~" + bcolors.ENDC
+                            for w in warn:
+                                sys.stdout.write(w)
+                                sys.stdout.flush()
+                                time.sleep(0.09)
                         except:
                             neo.one()
                             break
@@ -971,7 +905,7 @@ class neo_start(object):
                     break
             except:
                 os.system('clear')
-                beauty.block_banner()
+                beauty.graphics(), scriptures.verses()
                 break
 
 neo = neo_start()
